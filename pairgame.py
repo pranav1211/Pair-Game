@@ -43,7 +43,7 @@ root.title("Pair Game By Pranav Veeraghanta")
 
 # home section
 
-topfiller = Label(root,text="\n\n\n\n\n\n\n\n\n\n\n",
+topfiller = Label(root,text="\n\n\n\n\n\n\n\n\n\n\n\n",
                   bg='green')
 topfiller.pack()
 
