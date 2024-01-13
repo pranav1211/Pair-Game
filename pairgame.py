@@ -152,87 +152,87 @@ backhome = Button(root,text="Back",
 # game section:
 
 
-cell1 = Label(root,text="1",
+cell1 = Button(root,text="1",
               font=("Arial",25),
                bg="black",
                fg='white',)
 cell1.pack()
 
-cell2 = Label(root,text="2",
+cell2 = Button(root,text="2",
               font=("Arial",25),
                bg="black",
                fg='white',)
 cell2.pack()
 
-cell3 = Label(root,text="3",
+cell3 = Button(root,text="3",
               font=("Arial",25),
                bg="black",
                fg='white',)
 cell3.pack()
 
-cell4 = Label(root,text="4",
+cell4 = Button(root,text="4",
               font=("Arial",25),
                bg="black",
                fg='white',)
 cell4.pack()
 
-cellfiller1 = Label(root,text="",
+cellfiller1 = Button(root,text="",
                     font=("Arial",25),
                     bg="green",)
 cellfiller1.pack()
 
 #############################################################
 
-cell5 = Label(root,text="5",
+cell5 = Button(root,text="5",
               font=("Arial",25),
                bg="black",
                fg='white',)
 cell5.pack()
 
-cell6 = Label(root,text="6",
+cell6 = Button(root,text="6",
               font=("Arial",25),
                bg="black",
                fg='white',)
 cell6.pack()
 
-cell7 = Label(root,text="7",
+cell7 = Button(root,text="7",
               font=("Arial",25),
                bg="black",
                fg='white',)
 cell7.pack()
 
-cell8 = Label(root,text="8",
+cell8 = Button(root,text="8",
               font=("Arial",25),
                bg="black",
                fg='white',)
 cell8.pack()
 
-cellfiller2 = Label(root,text="",
+cellfiller2 = Button(root,text="",
                 font=("Arial",25),
                 bg="green",)
 cellfiller2.pack()
 
 ########################################################
 
-cell9 = Label(root,text="9",
+cell9 = Button(root,text="9",
               font=("Arial",25),
                bg="black",
                fg='white',)
 cell9.pack()
 
-cell10 = Label(root,text="10",
+cell10 = Button(root,text="10",
               font=("Arial",25),
                bg="black",
                fg='white',)
 cell10.pack()
 
-cell11 = Label(root,text="11",
+cell11 = Button(root,text="11",
               font=("Arial",25),
                bg="black",
                fg='white',)
 cell1.pack()
 
-cell12 = Label(root,text="12",
+cell12 = Button(root,text="12",
               font=("Arial",25),
                bg="black",
                fg='white',)
