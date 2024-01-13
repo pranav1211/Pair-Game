@@ -125,7 +125,7 @@ frame2.pack(side=TOP, padx=5, pady=5)
 frame3 = Frame(root,bg='green')
 frame3.pack(side=TOP, padx=5, pady=5)
 
-cell1 = Button(frame1,text="1",
+cell1 = Button(frame1,text="?",
               font=("Arial",25),
                bg="black",
                fg='white',
