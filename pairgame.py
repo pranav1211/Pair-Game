@@ -56,6 +56,7 @@ def checker(value,cellname):
         storevar1.set(value)
         newcell = str(cellname)
         newnewcell = newcell[0]
+        storecelllastnum.set(newnewcell)
         countvar.set(2)
         
     elif countvar.get() == 2:
