@@ -62,29 +62,25 @@ def checker(value,cellname):
         storecell2.set(cellname)
         
         if storevar1.get() == storevar2.get():
+            
             scorevar.set(scorevar.get() + 100)
             score.config(text=f"Score: {scorevar.get()}")
             
             countvar.set(1)
-            
             storevar1.set(0)
             storevar2.set(0)
-            storecell1.set("")
-            storecell2.set("")
             
             solvedvar.set(solvedvar.get()+1)
         
         else:
-            storecell1.get().config(text="?")
-            storecell2.get().config(text="?")
+            (storecell1.get()).config(text="?")
+            (storecell2.get()).config(text="?")
             
             countvar.set(1)
             
             storevar1.set(0)
             storevar2.set(0)
-            storecell1.set("")
-            storecell2.set("")
-            
+                        
             
 
 ##########################################################################
