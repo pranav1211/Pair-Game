@@ -28,7 +28,7 @@ def homepage():
     
 def startgame():
     hide_stuff(start)
-    hide_stuff(quit)
+    hide_stuff(quitgame)
     hide_stuff(howto)
 
 def hide_stuff(widget):
