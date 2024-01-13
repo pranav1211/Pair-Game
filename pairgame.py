@@ -53,13 +53,10 @@ def checker(value,cellname):
     cellname.config(text=value)
     
     a = [0]
-    b = [32]
-    
-    i=0
-        
-    if i == 0:
+    b = [0]
+  
+    if a[0] == 0:
         a[0] = value
-        i=32
     else:
         b[0] = value
         
