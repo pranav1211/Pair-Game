@@ -61,10 +61,10 @@ def checker(value,cellname):
 def scoretracker():
 
     thescore = 0
-    
+    thescore +=100
     return thescore
 
-    thescore +=100
+    
  
     
 
