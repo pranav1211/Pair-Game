@@ -52,11 +52,12 @@ def show_stuff(widget):
 def checker(value,cellname):
     cellname.config(text=value)
     
-    a = [0,0,0,0]
-    
+    a = [0]
+    b = [0]
     i=0
     a[i] = value
-    i = 1
+    if i == 0:
+        b[0]
         
     scorestring = "first digit is = ",a[0],"second digit is = ",a[1]
     
