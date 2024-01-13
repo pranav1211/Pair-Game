@@ -58,7 +58,7 @@ def checker(value,cellname):
     a[i] = value
     i+=1
         
-    score.config(text="first digit is = "+a[0])
+    score.config(text="first digit is = +a[0]")
     
     
 
