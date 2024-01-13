@@ -164,6 +164,10 @@ cell4 = Label(root,text="4",
                fg='white',)
 cell4.pack()
 
+midfiller = Label(root,text="\n\n\n\n\n\n\n\n\n\n\n\n",
+                  bg='green')
+midfiller.pack()
+
 cell5 = Label(root,text="5",
               font=("Arial",25),
                bg="black",
