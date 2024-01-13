@@ -61,13 +61,15 @@ def startgame():
     show_stuff(cell10)
     show_stuff(cell11)
     show_stuff(cell12)
+    show_stuff(cellfiller1)
+    show_stuff(cellfiller2)
     
     cell1.pack(side=LEFT)
     cell2.pack(side=LEFT)
     cell3.pack(side=LEFT)
     cell4.pack(side=LEFT)
     
-    cell5.pack()
+    cell5.pack(side=LEFT)
     cell6.pack(side=LEFT)
     cell7.pack(side=LEFT)
     cell8.pack(side=LEFT)
