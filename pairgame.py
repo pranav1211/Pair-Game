@@ -54,9 +54,11 @@ def checker(value,cellname):
            
     if countvar.get() == 1:
         storevar1.set(value)
+        
         newcell = str(cellname)
         newnewcell = newcell[0]
         storecelllastnum.set(newnewcell)
+        
         countvar.set(2)
         
     elif countvar.get() == 2:
@@ -77,9 +79,9 @@ def checker(value,cellname):
         else:
             cellname.config(text="?")
             
-            # cellnum = storecelllastnum.get()
-            # celltest = "cell" + str(cellnum)
-            # celltest.config(text="?")
+            cellnum = storecelllastnum.get()
+            celltest = "cell" + cellnum
+            celltest.config(text="?")
             
             storevar1.set(0)
             storevar2.set(0)
