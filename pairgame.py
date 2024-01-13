@@ -52,16 +52,18 @@ def show_stuff(widget):
 def checker(value,cellname):
     cellname.config(text=value)
     
-    cellnames =[]
+    cellnames = []
     
     if countvar.get() == 1:
         storevar1.set(value)
         cellnames.append(cellname)
+        storecell1.set(cellname)
         countvar.set(2)
         
     elif countvar.get() == 2:
         storevar2.set(value)
         cellnames.append(cellname)
+        storecell2.set(cellname)
         
         if storevar1.get() == storevar2.get():
             
