@@ -59,6 +59,7 @@ def startgame():
     show_stuff(cell11)
     show_stuff(cell12)
     
+    frame.pack(side=TOP, padx=5, pady=5)
     
     cell1.pack(side=LEFT)
     cell2.pack(side=LEFT)
