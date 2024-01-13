@@ -164,18 +164,20 @@ cell4.pack(side=LEFT,
 
 #############################################################
 
-cell5 = Button(frame2,text="2",
+cell5 = Button(frame2,text="?",
               font=("Arial",25),
                bg="black",
-               fg='white',)
+               fg='white',
+               command=lambda:checker(2,cell5))
 cell5.pack(side=LEFT,
            padx=10,
            pady=10)
 
-cell6 = Button(frame2,text="1",
+cell6 = Button(frame2,text="?",
               font=("Arial",25),
                bg="black",
-               fg='white',)
+               fg='white',
+               command=lambda:checker(1,cell6))
 cell6.pack(side=LEFT,
            padx=10,
            pady=10)
