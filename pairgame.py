@@ -75,8 +75,11 @@ def checker(value,cellname):
             solvedvar.set(solvedvar.get()+1)
         
         else:
-            cell1.config(text={storecell1.get()})
-            cell2.get().config(text={storecell2.get()})
+            cell1name = "cell",storevar1
+            cell1name.config(text="?")
+            
+            cell2name = "cell",storevar2
+            cell2name.config(text="?")
             
             countvar.set(1)
             
