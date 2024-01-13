@@ -28,8 +28,8 @@ def homepage():
     
 def startgame():
     hide_stuff(start)
-    hide_stuff(quitgame)
     hide_stuff(howto)
+    hide_stuff(quitgame)
 
 def hide_stuff(widget):
     widget.pack_forget()
