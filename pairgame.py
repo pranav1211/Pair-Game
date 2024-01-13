@@ -126,7 +126,7 @@ cell2 = Button(frame1,text="2",
                fg='white',)
 cell2.pack(side=LEFT)
 
-cell3 = Button(frame1,text="3",
+cell3 = Button(frame1,text="5",
               font=("Arial",25),
                bg="black",
                fg='white',)
@@ -140,25 +140,25 @@ cell4.pack(side=LEFT)
 
 #############################################################
 
-cell5 = Button(frame2,text="5",
+cell5 = Button(frame2,text="2",
               font=("Arial",25),
                bg="black",
                fg='white',)
 cell5.pack(side=LEFT)
 
-cell6 = Button(frame2,text="6",
+cell6 = Button(frame2,text="1",
               font=("Arial",25),
                bg="black",
                fg='white',)
 cell6.pack(side=LEFT)
 
-cell7 = Button(frame2,text="7",
+cell7 = Button(frame2,text="3",
               font=("Arial",25),
                bg="black",
                fg='white',)
 cell7.pack(side=LEFT)
 
-cell8 = Button(frame2,text="8",
+cell8 = Button(frame2,text="6",
               font=("Arial",25),
                bg="black",
                fg='white',)
@@ -166,25 +166,25 @@ cell8.pack(side=LEFT)
 
 ########################################################
 
-cell9 = Button(frame3,text="9",
+cell9 = Button(frame3,text="3",
               font=("Arial",25),
                bg="black",
                fg='white',)
 cell9.pack(side=LEFT)
 
-cell10 = Button(frame3,text="10",
+cell10 = Button(frame3,text="6",
               font=("Arial",25),
                bg="black",
                fg='white',)
 cell10.pack(side=LEFT)
 
-cell11 = Button(frame3,text="11",
+cell11 = Button(frame3,text="4",
               font=("Arial",25),
                bg="black",
                fg='white',)
 cell11.pack(side=LEFT)
 
-cell12 = Button(frame3,text="12",
+cell12 = Button(frame3,text="5",
               font=("Arial",25),
                bg="black",
                fg='white',)
