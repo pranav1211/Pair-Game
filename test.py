@@ -1,26 +1,17 @@
-import tkinter as tk
+from tkinter import *
+root = Tk()
 
-def update_score():
-    # Increment the score by 1 on each button press
-    score_var.set(score_var.get() + 1)
-    # Update the label text with the new score
-    score_label.config(text=f"Score: {score_var.get()}")
+def message():
+    L['text'] = 'I LIKE ICE CREAM'
 
-# Create the main window
-root = tk.Tk()
-root.title("Score Example")
+def delay():
+    L['text'] = 'Wait for it...'
+    root.after(2000, message)
 
-# Initialize the score variable
-score_var = tk.IntVar()
-score_var.set(0)
+L = Label(root, text="Please click the button.")
+L.pack()
 
-# Create a Label to display the current score
-score_label = tk.Label(root, text=f"Score: {score_var.get()}")
-score_label.pack(pady=10)
+B = Button(root, text="button", command=delay)
+B.pack()
 
-# Create a Button to trigger the update of the score
-update_button = tk.Button(root, text="Increase Score", command=update_score)
-update_button.pack(pady=10)
-
-# Start the Tkinter event loop
 root.mainloop()
