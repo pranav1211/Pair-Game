@@ -63,6 +63,9 @@ root.geometry('700x700')
 root.configure(bg='green')
 root.title("Match The Pair By Pranav Veeraghanta")
 
+scorevar = IntVar()
+scorevar.set(0)
+
 # home section
 
 topfiller = Label(root,text="\n\n\n\n\n\n\n\n\n\n\n\n",
@@ -113,9 +116,6 @@ backhome = Button(root,text="Back",
                command=lambda:homepage())
 
 # game section:
-
-scorevar = IntVar()
-scorevar.set(0)
 
 score = Label(root,text=f"Score: {scorevar.get()}",
               font=('Arial',15),
