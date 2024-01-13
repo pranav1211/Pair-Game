@@ -43,7 +43,7 @@ def show_stuff(widget):
 root  = Tk(className="Pair Game")
 root.geometry('700x700')
 root.configure(bg='green')
-root.title("Pair Game By Pranav Veeraghanta")
+root.title("Match The Pair By Pranav Veeraghanta")
 
 # home section
 
