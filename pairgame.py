@@ -59,7 +59,7 @@ def checker(value,cellname):
     elif countvar.get() == 2:
         storevar2.set(value)
         
-        
+         
         if storevar1.get() == storevar2.get():
             
             scorevar.set(scorevar.get() + 100)
