@@ -104,9 +104,10 @@ backhome = Button(root,text="Back",
 
 # game section:
 
-score = Label(root,text="Score : ",font=('Arial',15),
-                  bg='green',
-                  fg='white',)
+score = Label(root,text="Score : ",
+              font=('Arial',15),
+              bg='green',
+              fg='white',)
 score.pack()
 
 
