@@ -63,6 +63,8 @@ root.geometry('700x700')
 root.configure(bg='green')
 root.title("Match The Pair By Pranav Veeraghanta")
 
+# global variables
+
 scorevar = IntVar()
 scorevar.set(0)
 
