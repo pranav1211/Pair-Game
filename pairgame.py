@@ -64,8 +64,6 @@ def scoretracker():
 
     thescore +=100
     return thescore
-
-
  
     
 
