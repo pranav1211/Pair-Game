@@ -52,14 +52,8 @@ def show_stuff(widget):
 def checker(value,cellname):
     cellname.config(text=value)
     
-    a = []
-    b = []
-  
-    if a[0] == 0:
-        a[0] = value
-    else:
-        b[0] = value
-        
+    score = 100
+    score+=100
     scorestring = "first digit is = ",a[0],"second digit is = ",b[0]
     
     score.config(text=scorestring)
