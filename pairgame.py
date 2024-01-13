@@ -78,7 +78,8 @@ def checker(value,cellname):
             storevar1.set(0)
             storevar2.set(0)
                         
-            
+    if(solvedvar.get()==6):
+        score.config(text="complete")
 
 ##########################################################################
 
