@@ -65,7 +65,7 @@ def startgame():
     show_stuff(cell12)
     
     
-    cell1.pack(side=LEFT)
+    cell1.pack(side=LEFT,pady=20)
     cell2.pack(side=LEFT)
     cell3.pack(side=LEFT)
     cell4.pack(side=LEFT)
@@ -156,7 +156,7 @@ cell1 = Label(root,text="1",
               font=("Arial",25),
                bg="black",
                fg='white',)
-cell1.pack(pady=20)
+cell1.pack()
 
 cell2 = Label(root,text="2",
               font=("Arial",25),
