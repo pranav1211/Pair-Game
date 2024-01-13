@@ -66,23 +66,23 @@ def startgame():
     
     
     cell1.pack(side=LEFT,anchor="center")
-    cell2.pack(side=LEFT)
-    cell3.pack(side=LEFT)
-    cell4.pack(side=LEFT)
+    cell2.pack(side=LEFT,anchor="center")
+    cell3.pack(side=LEFT,anchor="center")
+    cell4.pack(side=LEFT,anchor="center")
     
     cellfiller1.pack()
     
-    cell5.pack(side=LEFT)
-    cell6.pack(side=LEFT)
-    cell7.pack(side=LEFT)
-    cell8.pack(side=LEFT)
+    cell5.pack(side=LEFT,anchor="center")
+    cell6.pack(side=LEFT,anchor="center")
+    cell7.pack(side=LEFT,anchor="center")
+    cell8.pack(side=LEFT,anchor="center")
     
     cellfiller2.pack()
     
-    cell9.pack(side=LEFT)
-    cell10.pack(side=LEFT)
-    cell11.pack(side=LEFT)
-    cell12.pack(side=LEFT)
+    cell9.pack(side=LEFT,anchor="center")
+    cell10.pack(side=LEFT,anchor="center")
+    cell11.pack(side=LEFT,anchor="center")
+    cell12.pack(side=LEFT,anchor="center")
     
     cellfiller2()
 
