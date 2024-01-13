@@ -76,7 +76,8 @@ def checker(value,cellname):
             solvedvar.set(solvedvar.get()+1)
         
         else:
-            storecelllastnum.get().config(text="?")
+            cell1name = storecelllastnum.get()
+            cell1name.config(text="?")
                    
             storevar1.set(0)
             storevar2.set(0)
