@@ -56,7 +56,7 @@ def checker(value,cellname):
     
     i=0
     a[i] = value
-    i+=1
+    i = 1
         
     scorestring = "first digit is = ",a[0],"second digit is = ",a[1]
     
