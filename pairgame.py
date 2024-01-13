@@ -55,9 +55,8 @@ def checker(value,cellname):
     i=0
     a = [0,0]    
     
-    for i in range(0,2):
-        a[i] = value
-        i = i+1
+    a[i] = value
+    i = i+1
 
     if a[0] == a[1]:
         score.config(text="works")
