@@ -53,7 +53,7 @@ def checker(value,cellname):
     cellname.config(text=value)
     
     score = 100    
-    scorestring = "Score : ",score
+    scorestring = "Score : ",score,""
     score.config(text=scorestring)
     score+=100
     
