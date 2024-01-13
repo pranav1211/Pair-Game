@@ -60,22 +60,19 @@ def startgame():
     show_stuff(cell12)
     
     frame1.pack(side=TOP, padx=5, pady=5)
-    
+    frame2.pack(side=TOP, padx=5, pady=5)
+    frame3.pack(side=TOP, padx=5, pady=5)
     
     cell1.pack(side=LEFT)
     cell2.pack(side=LEFT)
     cell3.pack(side=LEFT)
     cell4.pack(side=LEFT)
        
-    frame2.pack(side=TOP, padx=5, pady=5)       
-       
     cell5.pack(side=LEFT)
     cell6.pack(side=LEFT)
     cell7.pack(side=LEFT)
     cell8.pack(side=LEFT)
        
-    frame3.pack(side=TOP, padx=5, pady=5)
-    
     cell9.pack(side=LEFT)
     cell10.pack(side=LEFT)
     cell11.pack(side=LEFT)
