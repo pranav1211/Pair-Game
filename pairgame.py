@@ -55,12 +55,13 @@ def checker(value,cellname):
     if countvar.get() == 1:
         storevar1.set(value)        
         
-        storecelllastnum.set(cellname)
+        
         
         countvar.set(2)
         
     elif countvar.get() == 2:
         storevar2.set(value)
+        storecelllastnum.set(cellname)
         
         if storevar1.get() == storevar2.get():
             
