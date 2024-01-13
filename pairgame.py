@@ -5,11 +5,19 @@ def filler():
     hide_stuff(howtotext)
     hide_stuff(backhome)
     
-    for i in range(1,12):
-        i = str(i)
-        change = 'cell' + i
-        hide_stuff(change)
-        i = int(i)+1
+    hide_stuff(cell1)
+    hide_stuff(cell2)
+    hide_stuff(cell3)
+    hide_stuff(cell4)
+    hide_stuff(cell5)
+    hide_stuff(cell6)
+    hide_stuff(cell7)
+    hide_stuff(cell8)
+    hide_stuff(cell9)
+    hide_stuff(cell10)
+    hide_stuff(cell11)
+    hide_stuff(cell12)
+    
         
 
 
