@@ -105,13 +105,13 @@ backhome = Button(root,text="Back",
 # game section:
 
 
-frame1 = Frame(root)
-frame1.pack(side=TOP, padx=5, pady=5)
+frame1 = Frame(root,bg='green')
+frame1.pack(side=TOP, padx=5, pady=5,)
 
-frame2 = Frame(root)
+frame2 = Frame(root,bg='green')
 frame2.pack(side=TOP, padx=5, pady=5)
 
-frame3 = Frame(root)
+frame3 = Frame(root,bg='green')
 frame3.pack(side=TOP, padx=5, pady=5)
 
 cell1 = Button(frame1,text="1",
