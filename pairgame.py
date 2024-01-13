@@ -176,6 +176,8 @@ cell4 = Button(root,text="4",
 cell4.pack()
 
 #############################################################
+frame = Frame(root)
+frame.pack()
 
 cell5 = Button(root,text="5",
               font=("Arial",25),
@@ -202,6 +204,8 @@ cell8 = Button(root,text="8",
 cell8.pack()
 
 ########################################################
+frame = Frame(root)
+frame.pack()
 
 cell9 = Button(root,text="9",
               font=("Arial",25),
