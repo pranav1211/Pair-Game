@@ -51,7 +51,7 @@ start = Button(root,text="Start Game",
                font=("Arial",25),
                bg="black",
                padx=40,
-               fg='white')
+               fg='white',command=startgame())
 start.pack(padx=24,pady=20)
 
 howto = Button(root,text="How to Play",
