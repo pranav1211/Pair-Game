@@ -59,6 +59,9 @@ def checker(value,cellname):
         a[i] = value
         i = i+1
 
+    if a[0] == a[1]:
+        score.config(text="works")
+
 ##########################################################################
 
 root  = Tk(className="Pair Game")
