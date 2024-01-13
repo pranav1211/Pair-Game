@@ -62,12 +62,12 @@ def startgame():
     cell1.pack(side=LEFT)
     cell2.pack(side=LEFT)
     cell3.pack(side=LEFT)
-    cell4.pack()
+    cell4.pack(side=LEFT)
     
-    cell5.pack(side=LEFT)
+    cell5.pack()
     cell6.pack(side=LEFT)
     cell7.pack(side=LEFT)
-    cell8.pack()
+    cell8.pack(side=LEFT)
     
     cell9.pack(side=LEFT)
     cell10.pack(side=LEFT)
