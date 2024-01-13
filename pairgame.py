@@ -66,7 +66,7 @@ def startgame():
     
     
     cell1.pack(side=LEFT,
-               pady=20)
+               pady=60)
     cell2.pack(side=LEFT)
     cell3.pack(side=LEFT)
     cell4.pack(side=LEFT)
