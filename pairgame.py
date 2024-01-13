@@ -26,6 +26,10 @@ def homepage():
     show_stuff(quitgame)
     quitgame.pack(padx=20,pady=20)
     
+def startgame():
+    hide_stuff(start)
+    hide_stuff(quit)
+    hide_stuff(howto)
 
 def hide_stuff(widget):
     widget.pack_forget()
