@@ -73,7 +73,7 @@ quitgame.pack(padx=20,pady=20)
 
 # how to play section
 
-howtotext = Label(root,text="\t     HOW TO PLAY\n\n1. Click on any 2 squares to reveal a picture.\n\n2.If the pictures match you will get 100 points.\n\n3. If the pictures don't match the cards\n    will be hidden and you can try again.\n\n4. You have infinite number of tries!!!\n\n",
+howtotext = Label(root,text="\t     HOW TO PLAY\n\n1. Click on any 2 squares to reveal a number.\n\n2.If the numbers match you will get 100 points.\n\n3. If the numbers don't match the squares\n    will be hidden and you can try again.\n\n4. You have infinite number of tries!!!\n\n",
                   font=('Arial',15),
                   bg='green',
                   fg='white',
