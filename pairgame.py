@@ -53,7 +53,7 @@ def checker(value,cellname):
     cellname.config(text=value)
     
     i=0
-    count = 0
+    count = 1
     a = [0,0]  
     
     a[i] = value
