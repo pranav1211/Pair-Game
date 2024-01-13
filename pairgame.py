@@ -6,7 +6,8 @@ def filler():
     hide_stuff(backhome)
     
     for i in range(1,12):
-        change = 'cell' + str(i)
+        i = str(i)
+        change = 'cell' + i
         hide_stuff(change)
         i = int(i)+1
         
