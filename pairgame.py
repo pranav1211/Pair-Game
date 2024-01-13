@@ -68,6 +68,16 @@ root.title("Match The Pair By Pranav Veeraghanta")
 scorevar = IntVar()
 scorevar.set(0)
 
+storevar1 = IntVar()
+storevar1.set(0)
+
+storevar2 = IntVar()
+storevar2.set(0)
+
+countvar = IntVar()
+countvar.set(1)
+
+
 # home section
 
 topfiller = Label(root,text="\n\n\n\n\n\n\n\n\n\n\n\n",
