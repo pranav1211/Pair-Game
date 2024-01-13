@@ -54,7 +54,7 @@ def checker(value,cellname):
            
     if countvar.get() == 1:
         storevar1.set(value)
-        
+        storecelllastnum.set(cellname[4])
         countvar.set(2)
         
     elif countvar.get() == 2:
@@ -74,7 +74,8 @@ def checker(value,cellname):
         
         else:
             cellname.config(text="?")
-            celltest = "cell" + str(storevar1.get())
+            cellnum = storecelllastnum.get()
+            celltest = "cell" + cellnum
             celltest.config(text="?")
             
             storevar1.set(0)
@@ -100,6 +101,9 @@ storevar1.set(0)
 
 storevar2 = IntVar()
 storevar2.set(0)
+
+storecelllastnum = StringVar()
+storecelllastnum.set("0")
 
 countvar = IntVar()
 countvar.set(1)
