@@ -58,6 +58,19 @@ def startgame():
     show_stuff(cell10)
     show_stuff(cell11)
     show_stuff(cell12)
+    
+    cell1.pack(side=LEFT)
+    cell2.pack(side=LEFT)
+    cell3.pack(side=LEFT)
+    cell4.pack(side=LEFT)
+    cell5.pack(side=LEFT)
+    cell6.pack(side=LEFT)
+    cell7.pack(side=LEFT)
+    cell8.pack(side=LEFT)
+    cell9.pack(side=LEFT)
+    cell10.pack(side=LEFT)
+    cell11.pack(side=LEFT)
+    cell12.pack(side=LEFT)
 
 def hide_stuff(widget):
     widget.pack_forget()
