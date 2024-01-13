@@ -5,6 +5,8 @@ def filler():
     hide_stuff(howtotext)
     hide_stuff(backhome)
     
+    hide_stuff(score)
+    
     hide_stuff(frame1)
     hide_stuff(frame2)
     hide_stuff(frame3)  
