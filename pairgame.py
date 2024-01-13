@@ -64,9 +64,14 @@ def checker(value,cellname):
         if storevar1.get() == storevar2.get():
             scorevar.set(scorevar.get() + 100)
             score.config(text=f"Score: {scorevar.get()}")
+            
             countvar.set(1)
+            
             storevar1.set(0)
             storevar2.set(0)
+            
+            solvedvar.set(solvedvar.get()+1)
+            
             
 
 ##########################################################################
