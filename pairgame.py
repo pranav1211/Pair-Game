@@ -176,7 +176,7 @@ cell4 = Label(root,text="4",
                fg='white',)
 cell4.pack()
 
-cellfiller1 = Label(root,text="a",
+cellfiller1 = Label(root,text="",
                     font=("Arial",25),
                     bg="white",)
 cellfiller1.pack()
@@ -207,7 +207,7 @@ cell8 = Label(root,text="8",
                fg='white',)
 cell8.pack()
 
-cellfiller2 = Label(root,text="a",
+cellfiller2 = Label(root,text="",
                 font=("Arial",25),
                 bg="white",)
 cellfiller2.pack()
