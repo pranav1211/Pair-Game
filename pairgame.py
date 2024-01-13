@@ -176,7 +176,7 @@ cell4 = Button(root,text="4",
                fg='white',)
 cell4.pack()
 
-cellfiller1 = Button(root,text="",
+cellfiller1 = Label(root,text="",
                     font=("Arial",25),
                     bg="green",)
 cellfiller1.pack()
