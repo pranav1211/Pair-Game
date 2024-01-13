@@ -135,7 +135,7 @@ cell2 = Label(root,text="2",
               font=("Arial",25),
                bg="black",
                fg='white',)
-cell2.pack()
+cell2.pack(side=LEFT)
 
 cell3 = Label(root,text="3",
               font=("Arial",25),
