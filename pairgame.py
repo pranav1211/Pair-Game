@@ -114,14 +114,16 @@ backhome = Button(root,text="Back",
 
 # game section:
 
+scorevar = IntVar()
+scorevar.set(0)
+
 score = Label(root,text=f"Score: {scorevar.get()}",
               font=('Arial',15),
               bg='green',
               fg='white',)
 score.pack()
 
-scorevar = IntVar()
-scorevar.set(0)
+
 
 frame1 = Frame(root,bg='green')
 frame1.pack(side=TOP, padx=5, pady=5,)
