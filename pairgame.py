@@ -50,8 +50,6 @@ def show_stuff(widget):
     widget.pack()
     
 def checker(value,cellname):
-    cellname.config(text=value)
-    
     score = [100]    
     scorestring = "Score : ",score[0]
     score.config(text=scorestring)
