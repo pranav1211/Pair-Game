@@ -153,10 +153,11 @@ cell3.pack(side=LEFT,
            padx=10,
            pady=10)
 
-cell4 = Button(frame1,text="4",
+cell4 = Button(frame1,text="?",
               font=("Arial",25),
                bg="black",
-               fg='white',)
+               fg='white',
+               command=lambda:checker(4,cell4))
 cell4.pack(side=LEFT,
            padx=10,
            pady=10)
