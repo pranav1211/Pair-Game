@@ -56,8 +56,9 @@ def checker(value,cellname):
     
     i=0
     a[i] = value
+    i+=1
         
-    score.config(text=a[0])
+    score.config(text=a[0]+a[1])
     
     
 
