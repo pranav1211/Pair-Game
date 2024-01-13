@@ -202,34 +202,38 @@ cell8.pack(side=LEFT,
 
 ########################################################
 
-cell9 = Button(frame3,text="3",
+cell9 = Button(frame3,text="?",
               font=("Arial",25),
                bg="black",
-               fg='white',)
+               fg='white',
+               command=lambda:checker(3,cell9))
 cell9.pack(side=LEFT,
            padx=10,
            pady=10)
 
-cell10 = Button(frame3,text="6",
+cell10 = Button(frame3,text="?",
               font=("Arial",25),
                bg="black",
-               fg='white',)
+               fg='white',
+               command=lambda:checker(6,cell10))
 cell10.pack(side=LEFT,
            padx=10,
            pady=10)
 
-cell11 = Button(frame3,text="4",
+cell11 = Button(frame3,text="?",
               font=("Arial",25),
                bg="black",
-               fg='white',)
+               fg='white',
+               command=lambda:checker(4,cell11))
 cell11.pack(side=LEFT,
            padx=10,
            pady=10)
 
-cell12 = Button(frame3,text="5",
+cell12 = Button(frame3,text="?",
               font=("Arial",25),
                bg="black",
-               fg='white',)
+               fg='white',
+               command=lambda:checker(5,cell12))
 cell12.pack(side=LEFT,
            padx=10,
            pady=10)
