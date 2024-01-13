@@ -3,8 +3,7 @@ from tkinter import *
 def filler():
 
     hide_stuff(howtotext)
-    hide_stuff(backhome)
-    
+    hide_stuff(backhome)    
     hide_stuff(cell1)
 
 
@@ -32,6 +31,8 @@ def startgame():
     hide_stuff(start)
     hide_stuff(howto)
     hide_stuff(quitgame)
+    
+    show_stuff(cell1)
 
 def hide_stuff(widget):
     widget.pack_forget()
