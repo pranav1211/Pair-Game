@@ -50,7 +50,7 @@ topfiller.pack()
 start = Button(root,text="Start Game",
                font=("Arial",25),
                bg="black",
-               padx=90,
+               padx=70,
                fg='white')
 start.pack(padx=24,pady=20)
 
