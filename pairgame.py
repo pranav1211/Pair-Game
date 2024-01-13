@@ -54,7 +54,7 @@ def checker(value,cellname):
     
     count = 1
     
-    score.config(text=count)
+    score.config(text=value)
     
     count +=1
 
