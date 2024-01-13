@@ -60,9 +60,7 @@ def checker(value,cellname):
     i += 1    
     count +=1
     
-    if count == 2:
-        # if a[0] == a[1]:
-        score.config(text=a[0])
+    score.config(text=count)
 
 ##########################################################################
 
