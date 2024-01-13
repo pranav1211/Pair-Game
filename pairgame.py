@@ -67,7 +67,7 @@ quitgame = Button(root,text="Exit",
                   command=quit,
                   font=("Arial",25),
                    bg="black",
-                   padx=94,
+                   padx=95,
                    fg='white')
 quitgame.pack(padx=20,pady=20)
 
