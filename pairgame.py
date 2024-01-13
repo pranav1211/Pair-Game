@@ -4,6 +4,8 @@ def filler():
 
     hide_stuff(howtotext)
     hide_stuff(backhome)
+    
+    hide_stuff(cell1)
 
 
 def howtoplayinst(start,quit,howto):
