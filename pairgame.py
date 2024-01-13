@@ -53,10 +53,7 @@ def checker(value,cellname):
     cellname.config(text=value)
            
     if countvar.get() == 1:
-        storevar1.set(value)        
-        
-        
-        
+        storevar1.set(value)
         countvar.set(2)
         
     elif countvar.get() == 2:
