@@ -37,27 +37,10 @@ def startgame():
     hide_stuff(howto)
     hide_stuff(quitgame)
     
-    show_stuff(cell1)
-    show_stuff(cell2)
-    show_stuff(cell3)
-    show_stuff(cell4)
-    show_stuff(cell5)
-    show_stuff(cell6)
-    show_stuff(cell7)
-    show_stuff(cell8)
-    show_stuff(cell9)
-    show_stuff(cell10)
-    show_stuff(cell11)
-    show_stuff(cell12)
-    
-    frame1.pack(side=TOP, padx=5, pady=5)
-    frame2.pack(side=TOP, padx=5, pady=5)
-    frame3.pack(side=TOP, padx=5, pady=5)
-    
-    
-    
-    
-
+    show_stuff(frame1)
+    show_stuff(frame2)
+    show_stuff(frame3) 
+           
 def hide_stuff(widget):
     widget.pack_forget()
 
