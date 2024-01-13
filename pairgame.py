@@ -182,7 +182,7 @@ cell11 = Button(frame3,text="11",
               font=("Arial",25),
                bg="black",
                fg='white',)
-cell1.pack(side=LEFT)
+cell11.pack(side=LEFT)
 
 cell12 = Button(frame3,text="12",
               font=("Arial",25),
