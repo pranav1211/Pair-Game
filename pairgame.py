@@ -49,9 +49,10 @@ def hide_stuff(widget):
 def show_stuff(widget):
     widget.pack()
     
-def checker(value):
-    cell1.config(text=value)
+def checker(value,cellname):
+    cellname.config(text=value)
 
+##########################################################################
 
 root  = Tk(className="Pair Game")
 root.geometry('700x700')
