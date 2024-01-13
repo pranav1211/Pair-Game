@@ -52,18 +52,12 @@ def show_stuff(widget):
 def checker(value,cellname):
     cellname.config(text=value)
     
-    thescore = scoretracker()
-    scorestring = "Score : ",thescore    
+    scorestring = "Score : ",
     
     score.config(text=scorestring)
-   
-    
-def scoretracker():
 
-    thescore = int()
-    thescore +=100
-    return thescore
-
+scorevar = IntVar()
+scorevar.set(0)
     
  
     
