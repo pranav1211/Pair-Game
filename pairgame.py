@@ -78,11 +78,7 @@ def checker(value,cellname):
         
         else:
             cellname.config(text="?")
-            
-            cellnum = storecelllastnum.get()
-            celltest = "cell" + cellnum
-            celltest.config(text="?")
-            
+                   
             storevar1.set(0)
             storevar2.set(0)
                         
