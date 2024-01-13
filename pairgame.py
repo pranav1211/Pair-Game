@@ -59,22 +59,20 @@ def startgame():
     show_stuff(cell11)
     show_stuff(cell12)
     
-    frame.pack(side=TOP, padx=5, pady=5)
+    frame1.pack(side=TOP, padx=5, pady=5)
+    frame2.pack(side=TOP, padx=5, pady=5)
+    frame3.pack(side=TOP, padx=5, pady=5)
     
     cell1.pack(side=LEFT)
     cell2.pack(side=LEFT)
     cell3.pack(side=LEFT)
     cell4.pack(side=LEFT)
-    
-    frame.pack(side=TOP, padx=5, pady=5)
-    
+       
     cell5.pack(side=LEFT)
     cell6.pack(side=LEFT)
     cell7.pack(side=LEFT)
     cell8.pack(side=LEFT)
-
-    frame.pack(side=TOP, padx=5, pady=5)    
-    
+       
     cell9.pack(side=LEFT)
     cell10.pack(side=LEFT)
     cell11.pack(side=LEFT)
@@ -148,8 +146,14 @@ backhome = Button(root,text="Back",
 # game section:
 
 
-frame = Frame(root)
-frame.pack()
+frame1 = Frame(root)
+frame1.pack(side=TOP, padx=5, pady=5)
+
+frame2 = Frame(root)
+frame2.pack(side=TOP, padx=5, pady=5)
+
+frame3 = Frame(root)
+frame3.pack(side=TOP, padx=5, pady=5)
 
 cell1 = Button(root,text="1",
               font=("Arial",25),
@@ -176,8 +180,6 @@ cell4 = Button(root,text="4",
 cell4.pack()
 
 #############################################################
-frame = Frame(root)
-frame.pack()
 
 cell5 = Button(root,text="5",
               font=("Arial",25),
@@ -204,8 +206,6 @@ cell8 = Button(root,text="8",
 cell8.pack()
 
 ########################################################
-frame = Frame(root)
-frame.pack()
 
 cell9 = Button(root,text="9",
               font=("Arial",25),
