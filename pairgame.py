@@ -129,7 +129,7 @@ cell1 = Label(root,text="1",
               font=("Arial",25),
                bg="black",
                fg='white',)
-cell1.pack(side=Tk)
+cell1.pack(side=LEFT)
 
 cell2 = Label(root,text="2",
               font=("Arial",25),
