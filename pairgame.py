@@ -106,10 +106,10 @@ storevar2 = IntVar()
 storevar2.set(0)
 
 storecell1 = StringVar()
-storecell1.set("")
+storecell1.set("0")
 
 storecell2 = StringVar()
-storecell2.set("")
+storecell2.set("0")
 
 countvar = IntVar()
 countvar.set(1)
