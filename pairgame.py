@@ -52,7 +52,7 @@ def show_stuff(widget):
 def checker(value,cellname):
     cellname.config(text=value)
     
-    cellnames = []
+    cellnames = [0,0,0,]
     
     if countvar.get() == 1:
         storevar1.set(value)
