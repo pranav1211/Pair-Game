@@ -7,11 +7,15 @@ def button_click():
 root = tk.Tk()
 root.title("Button Grid")
 
-# Create and pack buttons in 3 rows and 4 columns
+# Create frames for each row
 for i in range(3):
+    frame = tk.Frame(root)
+    frame.pack(side=tk.TOP, padx=5, pady=5)
+
+    # Create and pack buttons in each row
     for j in range(4):
-        button = tk.Button(root, text=f"Button {i*4 + j + 1}", command=button_click)
-        button.pack(side=tk.LEFT, padx=5, pady=5)
+        button = tk.Button(frame, text=f"Button {i*4 + j + 1}", command=button_click)
+        button.pack(side=tk.LEFT)
 
 # Start the Tkinter event loop
 root.mainloop()
