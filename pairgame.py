@@ -60,7 +60,7 @@ def checker(value,cellname):
     a[i] = value
     if i == 0:
         a[0] = value
-        i=1
+        i=32
     else:
         b[0] = value
         
