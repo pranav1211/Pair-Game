@@ -1,14 +1,21 @@
-from tkinter import Tk, Label
+import tkinter as tk
 
-root = Tk()
+def button_clicked(button_number):
+    print(f"Button {button_number} clicked!")
 
-for i in range(1, 13):
-    label_text = str(i).replace('1', '2')
-    label = Label(root,
-                  text=label_text,
-                  font=("Arial", 25),
-                  bg="black",
-                  fg='white',)
-    label.pack()
+# Create the main window
+root = tk.Tk()
+root.title("Centered Buttons")
 
+# Create three buttons
+button1 = tk.Button(root, text="Button 1", command=lambda: button_clicked(1))
+button2 = tk.Button(root, text="Button 2", command=lambda: button_clicked(2))
+button3 = tk.Button(root, text="Button 3", command=lambda: button_clicked(3))
+
+# Pack the buttons with some space between them
+button1.pack(side=tk.LEFT, padx=10)
+button2.pack(side=tk.LEFT, padx=10)
+button3.pack(side=tk.LEFT, padx=10)
+
+# Start the main loop
 root.mainloop()
