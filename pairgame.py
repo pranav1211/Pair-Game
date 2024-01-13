@@ -53,13 +53,16 @@ def checker(value,cellname):
     cellname.config(text=value)
     
     i=0
-    a = [0,0]    
+    count = 0
+    a = [0,0]  
     
     a[i] = value
-    i = i+1
-
-    if a[0] == a[1]:
-        score.config(text="works")
+    i += 1    
+    count +=1
+    
+    if count == 2:
+        if a[0] == a[1]:
+            score.config(text="works")
 
 ##########################################################################
 
