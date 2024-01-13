@@ -97,7 +97,10 @@ backhome = Button(root,text="Back",
 # game section:
 
 
-cell1 = Label(root,text="1")
+cell1 = Label(root,text="1",
+              font=("Arial",25),
+               bg="black",
+               fg='white',)
 
 
 
