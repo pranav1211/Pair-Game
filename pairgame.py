@@ -65,9 +65,9 @@ def startgame():
     show_stuff(cell12)
     
     
-    cell1.pack(side=TOP)
-    cell2.pack(side=TOP)
-    cell3.pack(side=TOP)
+    cell1.pack(side=LEFT)
+    cell2.pack(side=LEFT)
+    cell3.pack(side=LEFT)
     cell4.pack(side=TOP)
     
     cellfiller1.pack()
