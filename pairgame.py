@@ -164,6 +164,8 @@ cell4 = Label(root,text="4",
                fg='white',)
 cell4.pack()
 
+cellfiller1 = Label(root,text="")
+
 cell5 = Label(root,text="5",
               font=("Arial",25),
                bg="black",
