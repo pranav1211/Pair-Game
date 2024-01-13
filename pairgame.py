@@ -66,6 +66,7 @@ def checker(value,cellname):
             score.config(text=f"Score: {scorevar.get()}")
             
             countvar.set(1)
+            
             storevar1.set(0)
             storevar2.set(0)
             
