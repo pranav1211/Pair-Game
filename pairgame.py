@@ -74,9 +74,9 @@ def startgame():
     cell8.pack(frame2,side=LEFT)
        
     cell9.pack(frame3,side=LEFT)
-    cell10.pack(side=LEFT)
-    cell11.pack(side=LEFT)
-    cell12.pack(side=LEFT)
+    cell10.pack(frame3,side=LEFT)
+    cell11.pack(frame3,side=LEFT)
+    cell12.pack(frame3,side=LEFT)
     
     
 
