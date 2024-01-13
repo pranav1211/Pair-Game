@@ -94,6 +94,7 @@ countvar = IntVar()
 countvar.set(1)
 
 solvedvar = IntVar()
+solvedvar.set(0)
 
 # home section
 
