@@ -89,6 +89,34 @@ backhome = Button(root,text="Back",
                padx=90,
                command=lambda:homepage())
 
+# game section:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 filler()
