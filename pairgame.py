@@ -1,7 +1,5 @@
 from tkinter import *
 
-thescore = 0
-
 def filler():
 
     hide_stuff(howtotext)
@@ -54,16 +52,19 @@ def show_stuff(widget):
 def checker(value,cellname):
     cellname.config(text=value)
     
-    fromfun = scoretracker()
-    scorestring = "Score : ",fromfun
+    thescore = scoretracker()
+    scorestring = "Score : ",thescore    
     
     score.config(text=scorestring)
    
     
 def scoretracker():
 
+    thescore = int()
     thescore +=100
     return thescore
+
+    
  
     
 
