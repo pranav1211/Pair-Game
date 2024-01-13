@@ -105,6 +105,7 @@ backhome = Button(root,text="Back",
 # game section:
 
 score = Label(root,text="Score : ")
+score.pack()
 
 
 frame1 = Frame(root,bg='green')
