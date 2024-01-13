@@ -16,8 +16,7 @@ def filler():
     hide_stuff(cell9)
     hide_stuff(cell10)
     hide_stuff(cell11)
-    hide_stuff(cell12)
-    
+    hide_stuff(cell12)    
     hide_stuff(cellfiller1)
     hide_stuff(cellfiller2)
     
