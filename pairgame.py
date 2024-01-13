@@ -54,13 +54,11 @@ def checker(value,cellname):
            
     if countvar.get() == 1:
         storevar1.set(value)
-        storecell1.set(cellname)
         countvar.set(2)
-        cellname.config(command=())
         
     elif countvar.get() == 2:
         storevar2.set(value)
-        storecell2.set(cellname)
+        
         
         if storevar1.get() == storevar2.get():
             
@@ -185,7 +183,7 @@ cell1 = Button(frame1,text="?",
               font=("Arial",25),
                bg="black",
                fg='white',
-               command=lambda:checker(1,'cell1'))
+               command=lambda:checker(1,cell1))
 cell1.pack(side=LEFT,
            padx=10,
            pady=10)
@@ -194,7 +192,7 @@ cell2 = Button(frame1,text="?",
               font=("Arial",25),
                bg="black",
                fg='white',
-               command=lambda:checker(2,'cell2'))
+               command=lambda:checker(2,cell2))
 cell2.pack(side=LEFT,
            padx=10,
            pady=10)
@@ -203,7 +201,7 @@ cell3 = Button(frame1,text="?",
               font=("Arial",25),
                bg="black",
                fg='white',
-               command=lambda:checker(5,'cell3'))
+               command=lambda:checker(5,cell3))
 cell3.pack(side=LEFT,
            padx=10,
            pady=10)
@@ -212,7 +210,7 @@ cell4 = Button(frame1,text="?",
               font=("Arial",25),
                bg="black",
                fg='white',
-               command=lambda:checker(4,'cell4'))
+               command=lambda:checker(4,cell4))
 cell4.pack(side=LEFT,
            padx=10,
            pady=10)
@@ -223,7 +221,7 @@ cell5 = Button(frame2,text="?",
               font=("Arial",25),
                bg="black",
                fg='white',
-               command=lambda:checker(2,'cell5'))
+               command=lambda:checker(2,cell5))
 cell5.pack(side=LEFT,
            padx=10,
            pady=10)
@@ -232,7 +230,7 @@ cell6 = Button(frame2,text="?",
               font=("Arial",25),
                bg="black",
                fg='white',
-               command=lambda:checker(1,'cell6'))
+               command=lambda:checker(1,cell6))
 cell6.pack(side=LEFT,
            padx=10,
            pady=10)
@@ -241,7 +239,7 @@ cell7 = Button(frame2,text="?",
               font=("Arial",25),
                bg="black",
                fg='white',
-               command=lambda:checker(3,'cell7'))
+               command=lambda:checker(3,cell7))
 cell7.pack(side=LEFT,
            padx=10,
            pady=10)
@@ -250,7 +248,7 @@ cell8 = Button(frame2,text="?",
               font=("Arial",25),
                bg="black",
                fg='white',
-               command=lambda:checker(6,'cell8'))
+               command=lambda:checker(6,cell8))
 cell8.pack(side=LEFT,
            padx=10,
            pady=10)
@@ -261,7 +259,7 @@ cell9 = Button(frame3,text="?",
               font=("Arial",25),
                bg="black",
                fg='white',
-               command=lambda:checker(3,'cell9'))
+               command=lambda:checker(3,cell9))
 cell9.pack(side=LEFT,
            padx=10,
            pady=10)
@@ -270,7 +268,7 @@ cell10 = Button(frame3,text="?",
               font=("Arial",25),
                bg="black",
                fg='white',
-               command=lambda:checker(6,'cell10'))
+               command=lambda:checker(6,cell10))
 cell10.pack(side=LEFT,
            padx=10,
            pady=10)
@@ -279,7 +277,7 @@ cell11 = Button(frame3,text="?",
               font=("Arial",25),
                bg="black",
                fg='white',
-               command=lambda:checker(4,'cell11'))
+               command=lambda:checker(4,cell11))
 cell11.pack(side=LEFT,
            padx=10,
            pady=10)
@@ -288,7 +286,7 @@ cell12 = Button(frame3,text="?",
               font=("Arial",25),
                bg="black",
                fg='white',
-               command=lambda:checker(5,'cell12'))
+               command=lambda:checker(5,cell12))
 cell12.pack(side=LEFT,
            padx=10,
            pady=10)
