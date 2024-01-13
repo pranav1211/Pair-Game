@@ -148,7 +148,7 @@ backhome = Button(root,text="Back",
 
 
 frame = Frame(root)
-frame.pack(side=TOP, padx=5, pady=5)
+frame.pack()
 
 cell1 = Button(root,text="1",
               font=("Arial",25),
