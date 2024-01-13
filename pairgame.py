@@ -118,7 +118,9 @@ cell1 = Button(frame1,text="1",
               font=("Arial",25),
                bg="black",
                fg='white',)
-cell1.pack(side=LEFT)
+cell1.pack(side=LEFT,
+           padx=10,
+           pady=10)
 
 cell2 = Button(frame1,text="2",
               font=("Arial",25),
