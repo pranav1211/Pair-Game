@@ -52,15 +52,15 @@ def show_stuff(widget):
 def checker(value,cellname):
     cellname.config(text=value)
     
-    if countvar.get == 1:
+    if countvar.get() == 1:
         storevar1.set(value)
         countvar.set(2)
-    elif countvar == 2:
+    elif countvar() == 2:
         storevar2.set(value)
-    
-    scorevar.set(scorevar.get() + 100)
-    
-    score.config(text=f"Score: {scorevar.get()}")
+        
+        if storevar1.get() == storevar2.get():
+            scorevar.set(scorevar.get() + 100)
+            score.config(text=f"Score: {scorevar.get()}")
 
 ##########################################################################
 
