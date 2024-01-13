@@ -69,6 +69,8 @@ def checker(value,cellname):
             
             storevar1.set(0)
             storevar2.set(0)
+            storecell1.set("")
+            storecell2.set("")
             
             solvedvar.set(solvedvar.get()+1)
             
