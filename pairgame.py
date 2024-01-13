@@ -52,11 +52,11 @@ def show_stuff(widget):
 def checker(value,cellname):
     cellname.config(text=value)
     
-    count = 1
-    
+    a = [0,0,0,0]
+        
     score.config(text=value)
     
-    count +=1
+    
 
 ##########################################################################
 
