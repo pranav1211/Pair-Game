@@ -52,7 +52,7 @@ def show_stuff(widget):
 def checker(value,cellname):
     cellname.config(text=value)
     
-    scorestring = "Score : ",
+    scorestring = "Score : ",scorevar.set(scorevar.get() + 100)
     
     score.config(text=scorestring)
 
