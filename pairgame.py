@@ -58,8 +58,11 @@ def checker(value,cellname):
     a[i] = value
     if i == 0:
         a[0] = value
+        i=1
+    else:
+        b[0] = value
         
-    scorestring = "first digit is = ",a[0],"second digit is = ",a[1]
+    scorestring = "first digit is = ",a[0],"second digit is = ",b[0]
     
     score.config(text=scorestring)
     
