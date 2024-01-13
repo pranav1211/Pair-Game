@@ -52,11 +52,11 @@ def show_stuff(widget):
 def checker(value,cellname):
     cellname.config(text=value)
     
-    a = [0]
-    b = [0]
+    a = []
+    b = []
   
     if a[0] is 0:
-        a[0] = 10
+        a[0] = value
     else:
         b[0] = value
         
