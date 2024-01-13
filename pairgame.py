@@ -49,7 +49,8 @@ def hide_stuff(widget):
 def show_stuff(widget):
     widget.pack()
     
-
+def checker():
+    cell1.config(text="?")
 
 
 root  = Tk(className="Pair Game")
@@ -127,7 +128,8 @@ frame3.pack(side=TOP, padx=5, pady=5)
 cell1 = Button(frame1,text="1",
               font=("Arial",25),
                bg="black",
-               fg='white',)
+               fg='white',
+               command=lambda:checker())
 cell1.pack(side=LEFT,
            padx=10,
            pady=10)
