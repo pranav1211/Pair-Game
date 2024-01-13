@@ -135,18 +135,20 @@ cell1.pack(side=LEFT,
            padx=10,
            pady=10)
 
-cell2 = Button(frame1,text="2",
+cell2 = Button(frame1,text="?",
               font=("Arial",25),
                bg="black",
-               fg='white',)
+               fg='white',
+               command=lambda:checker(2,cell2))
 cell2.pack(side=LEFT,
            padx=10,
            pady=10)
 
-cell3 = Button(frame1,text="5",
+cell3 = Button(frame1,text="?",
               font=("Arial",25),
                bg="black",
-               fg='white',)
+               fg='white',
+               command=lambda:checker(5,cell3))
 cell3.pack(side=LEFT,
            padx=10,
            pady=10)
