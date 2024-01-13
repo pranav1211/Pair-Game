@@ -212,6 +212,10 @@ cellfiller2 = Button(root,text="",
                 bg="green",)
 cellfiller2.pack()
 
+cellfiller2 = Button(root,text="",
+                font=("Arial",25),
+                bg="green",)
+cellfiller2.pack()
 ########################################################
 
 cell9 = Button(root,text="9",
