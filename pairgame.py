@@ -191,10 +191,11 @@ cell7.pack(side=LEFT,
            padx=10,
            pady=10)
 
-cell8 = Button(frame2,text="6",
+cell8 = Button(frame2,text="?",
               font=("Arial",25),
                bg="black",
-               fg='white',)
+               fg='white',
+               command=lambda:checker(6,cell8))
 cell8.pack(side=LEFT,
            padx=10,
            pady=10)
