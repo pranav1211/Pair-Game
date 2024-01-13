@@ -56,12 +56,6 @@ def checker(value,cellname):
     
     score.config(text=f"Score: {scorevar.get()}")
 
-scorevar = IntVar()
-scorevar.set(0)
-    
- 
-    
-
 ##########################################################################
 
 root  = Tk(className="Pair Game")
@@ -126,6 +120,8 @@ score = Label(root,text=f"Score: {scorevar.get()}",
               fg='white',)
 score.pack()
 
+scorevar = IntVar()
+scorevar.set(0)
 
 frame1 = Frame(root,bg='green')
 frame1.pack(side=TOP, padx=5, pady=5,)
