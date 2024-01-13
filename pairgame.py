@@ -50,6 +50,7 @@ topfiller.pack()
 start = Button(root,text="Start Game",
                font=("Arial",25),
                bg="black",
+               padx=90,
                fg='white')
 start.pack(padx=24,pady=20)
 
@@ -57,6 +58,7 @@ howto = Button(root,text="How to Play",
                font=("Arial",25),
                bg="black",
                fg='white',
+               padx=90,
                command=lambda:howtoplayinst(start,quitgame,howto))
 howto.pack(padx=20)
 
@@ -65,6 +67,7 @@ quitgame = Button(root,text="Exit",
                   command=quit,
                   font=("Arial",25),
                    bg="black",
+                   padx=90,
                    fg='white')
 quitgame.pack(padx=20,pady=20)
 
