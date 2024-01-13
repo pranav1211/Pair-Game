@@ -52,9 +52,9 @@ def show_stuff(widget):
 def checker(value,cellname):
     cellname.config(text=value)
     
-    scorestring = "Score : ",scorevar.set(scorevar.get() + 100)
+    scorevar.set(scorevar.get() + 100)
     
-    score.config(text=scorestring)
+    score.config(text=f"Score: {scorevar.get()}")
 
 scorevar = IntVar()
 scorevar.set(0)
@@ -120,7 +120,7 @@ backhome = Button(root,text="Back",
 
 # game section:
 
-score = Label(root,text="Score : ",
+score = Label(root,text=f"Score: {scorevar.get()}",
               font=('Arial',15),
               bg='green',
               fg='white',)
