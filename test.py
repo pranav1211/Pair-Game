@@ -1,110 +1,26 @@
-from tkinter import *
+import tkinter as tk
 
-def filler():
-    hide_stuff(frame1)
-    hide_stuff(frame2)
-    hide_stuff(frame3)
-    
-def howtoplayinst():
-    hide_stuff(start)
-    hide_stuff(quitgame)
-    hide_stuff(howto)
-    
-    show_stuff(howtotext)
-    show_stuff(backhome)
+def update_score():
+    # Increment the score by 1 on each button press
+    score_var.set(score_var.get() + 1)
+    # Update the label text with the new score
+    score_label.config(text=f"Score: {score_var.get()}")
 
-def homepage():
-    hide_stuff(howtotext)
-    hide_stuff(backhome)
+# Create the main window
+root = tk.Tk()
+root.title("Score Example")
 
-    show_stuff(start)
-    show_stuff(howto)    
-    show_stuff(quitgame)
+# Initialize the score variable
+score_var = tk.IntVar()
+score_var.set(0)
 
-def startgame():
-    hide_stuff(start)
-    hide_stuff(howto)
-    hide_stuff(quitgame)
-    
-    show_stuff(frame1)
-    show_stuff(frame2)
-    show_stuff(frame3)
+# Create a Label to display the current score
+score_label = tk.Label(root, text=f"Score: {score_var.get()}")
+score_label.pack(pady=10)
 
-def hide_stuff(widget):
-    widget.pack_forget()
+# Create a Button to trigger the update of the score
+update_button = tk.Button(root, text="Increase Score", command=update_score)
+update_button.pack(pady=10)
 
-def show_stuff(widget):
-    widget.pack()
-
-root  = Tk(className="Pair Game")
-root.geometry('700x700')
-root.configure(bg='green')
-root.title("Match The Pair By Pranav Veeraghanta")
-
-# home section
-topfiller = Label(root, text="\n\n\n\n\n\n\n\n\n\n\n\n", bg='green')
-topfiller.pack()
-
-start = Button(root, text="Start Game", font=("Arial", 25), bg="black", padx=40, fg='white', command=lambda: startgame())
-start.pack(padx=24, pady=20)
-
-howto = Button(root, text="How to Play", font=("Arial", 25), bg="black", fg='white', padx=37, command=lambda: howtoplayinst())
-howto.pack(padx=20)
-
-quitgame = Button(root, text="Exit", command=quit, font=("Arial", 25), bg="black", padx=95, fg='white')
-quitgame.pack(padx=20, pady=20)
-
-# how to play section
-howtotext = Label(root, text="\t     HOW TO PLAY\n\n1. Click on any 2 squares to reveal a number.\n\n2.If the numbers match you will get 100 points.\n\n3. If the numbers don't match the squares\n    will be hidden and you can try again.\n\n4. You have infinite number of tries!!!\n\n",
-                  font=('Arial', 15), bg='green', fg='white', padx=95, justify=LEFT)
-
-backhome = Button(root, text="Back", font=("Arial", 25), bg="black", fg='white', padx=90, command=lambda: homepage())
-
-# game section:
-frame1 = Frame(root)
-frame1.pack(side=TOP, padx=5, pady=5)
-
-frame2 = Frame(root)
-frame2.pack(side=TOP, padx=5, pady=5)
-
-frame3 = Frame(root)
-frame3.pack(side=TOP, padx=5, pady=5)
-
-cell1 = Button(frame1, text="1", font=("Arial", 25), bg="black", fg='white')
-cell1.pack(side=LEFT)
-
-cell2 = Button(frame1, text="2", font=("Arial", 25), bg="black", fg='white')
-cell2.pack(side=LEFT)
-
-cell3 = Button(frame1, text="3", font=("Arial", 25), bg="black", fg='white')
-cell3.pack(side=LEFT)
-
-cell4 = Button(frame1, text="4", font=("Arial", 25), bg="black", fg='white')
-cell4.pack(side=LEFT)
-
-cell5 = Button(frame2, text="5", font=("Arial", 25), bg="black", fg='white')
-cell5.pack(side=LEFT)
-
-cell6 = Button(frame2, text="6", font=("Arial", 25), bg="black", fg='white')
-cell6.pack(side=LEFT)
-
-cell7 = Button(frame2, text="7", font=("Arial", 25), bg="black", fg='white')
-cell7.pack(side=LEFT)
-
-cell8 = Button(frame2, text="8", font=("Arial", 25), bg="black", fg='white')
-cell8.pack(side=LEFT)
-
-cell9 = Button(frame3, text="9", font=("Arial", 25), bg="black", fg='white')
-cell9.pack(side=LEFT)
-
-cell10 = Button(frame3, text="10", font=("Arial", 25), bg="black", fg='white')
-cell10.pack(side=LEFT)
-
-cell11 = Button(frame3, text="11", font=("Arial", 25), bg="black", fg='white')
-cell11.pack(side=LEFT)
-
-cell12 = Button(frame3, text="12", font=("Arial", 25), bg="black", fg='white')
-cell12.pack(side=LEFT)
-
-filler()
+# Start the Tkinter event loop
 root.mainloop()
