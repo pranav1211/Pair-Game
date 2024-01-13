@@ -56,7 +56,7 @@ def checker(value,cellname):
     b = [0]
   
     if a[0] is 0:
-        a[0] = value
+        a[0] = 10
     else:
         b[0] = value
         
