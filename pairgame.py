@@ -126,19 +126,25 @@ cell2 = Button(frame1,text="2",
               font=("Arial",25),
                bg="black",
                fg='white',)
-cell2.pack(side=LEFT)
+cell2.pack(side=LEFT,
+           padx=10,
+           pady=10)
 
 cell3 = Button(frame1,text="5",
               font=("Arial",25),
                bg="black",
                fg='white',)
-cell3.pack(side=LEFT)
+cell3.pack(side=LEFT,
+           padx=10,
+           pady=10)
 
 cell4 = Button(frame1,text="4",
               font=("Arial",25),
                bg="black",
                fg='white',)
-cell4.pack(side=LEFT)
+cell4.pack(side=LEFT,
+           padx=10,
+           pady=10)
 
 #############################################################
 
@@ -146,25 +152,33 @@ cell5 = Button(frame2,text="2",
               font=("Arial",25),
                bg="black",
                fg='white',)
-cell5.pack(side=LEFT)
+cell5.pack(side=LEFT,
+           padx=10,
+           pady=10)
 
 cell6 = Button(frame2,text="1",
               font=("Arial",25),
                bg="black",
                fg='white',)
-cell6.pack(side=LEFT)
+cell6.pack(side=LEFT,
+           padx=10,
+           pady=10)
 
 cell7 = Button(frame2,text="3",
               font=("Arial",25),
                bg="black",
                fg='white',)
-cell7.pack(side=LEFT)
+cell7.pack(side=LEFT,
+           padx=10,
+           pady=10)
 
 cell8 = Button(frame2,text="6",
               font=("Arial",25),
                bg="black",
                fg='white',)
-cell8.pack(side=LEFT)
+cell8.pack(side=LEFT,
+           padx=10,
+           pady=10)
 
 ########################################################
 
@@ -172,25 +186,33 @@ cell9 = Button(frame3,text="3",
               font=("Arial",25),
                bg="black",
                fg='white',)
-cell9.pack(side=LEFT)
+cell9.pack(side=LEFT,
+           padx=10,
+           pady=10)
 
 cell10 = Button(frame3,text="6",
               font=("Arial",25),
                bg="black",
                fg='white',)
-cell10.pack(side=LEFT)
+cell10.pack(side=LEFT,
+           padx=10,
+           pady=10)
 
 cell11 = Button(frame3,text="4",
               font=("Arial",25),
                bg="black",
                fg='white',)
-cell11.pack(side=LEFT)
+cell11.pack(side=LEFT,
+           padx=10,
+           pady=10)
 
 cell12 = Button(frame3,text="5",
               font=("Arial",25),
                bg="black",
                fg='white',)
-cell12.pack(side=LEFT)
+cell12.pack(side=LEFT,
+           padx=10,
+           pady=10)
 
 
 
