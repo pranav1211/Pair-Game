@@ -141,61 +141,61 @@ cell3 = Label(root,text="3",
               font=("Arial",25),
                bg="black",
                fg='white',)
-cell3.pack()
+cell3.pack(side=LEFT)
 
 cell4 = Label(root,text="4",
               font=("Arial",25),
                bg="black",
                fg='white',)
-cell4.pack()
+cell4.pack(side=LEFT)
 
 cell5 = Label(root,text="5",
               font=("Arial",25),
                bg="black",
                fg='white',)
-cell5.pack()
+cell5.pack(side=LEFT)
 
 cell6 = Label(root,text="6",
               font=("Arial",25),
                bg="black",
                fg='white',)
-cell6.pack()
+cell6.pack(side=LEFT)
 
 cell7 = Label(root,text="7",
               font=("Arial",25),
                bg="black",
                fg='white',)
-cell1.pack()
+cell7.pack(side=LEFT)
 
 cell8 = Label(root,text="8",
               font=("Arial",25),
                bg="black",
                fg='white',)
-cell8.pack()
+cell8.pack(side=LEFT)
 
 cell9 = Label(root,text="9",
               font=("Arial",25),
                bg="black",
                fg='white',)
-cell1.pack()
+cell9.pack(side=LEFT)
 
 cell10 = Label(root,text="10",
               font=("Arial",25),
                bg="black",
                fg='white',)
-cell10.pack()
+cell10.pack(side=LEFT)
 
 cell11 = Label(root,text="11",
               font=("Arial",25),
                bg="black",
                fg='white',)
-cell1.pack()
+cell1.pack(side=LEFT)
 
 cell12 = Label(root,text="12",
               font=("Arial",25),
                bg="black",
                fg='white',)
-cell12.pack()
+cell12.pack(side=LEFT)
 
 
 
