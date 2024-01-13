@@ -5,18 +5,9 @@ def filler():
     hide_stuff(howtotext)
     hide_stuff(backhome)
     
-    hide_stuff(cell1)
-    hide_stuff(cell2)
-    hide_stuff(cell3)
-    hide_stuff(cell4)
-    hide_stuff(cell5)
-    hide_stuff(cell6)
-    hide_stuff(cell7)
-    hide_stuff(cell8)
-    hide_stuff(cell9)
-    hide_stuff(cell10)
-    hide_stuff(cell11)
-    hide_stuff(cell12)    
+    hide_stuff(frame1)
+    hide_stuff(frame2)
+    hide_stuff(frame3)  
     
         
 
@@ -46,22 +37,9 @@ def startgame():
     hide_stuff(howto)
     hide_stuff(quitgame)
     
-    show_stuff(cell1)
-    show_stuff(cell2)
-    show_stuff(cell3)
-    show_stuff(cell4)
-    show_stuff(cell5)
-    show_stuff(cell6)
-    show_stuff(cell7)
-    show_stuff(cell8)
-    show_stuff(cell9)
-    show_stuff(cell10)
-    show_stuff(cell11)
-    show_stuff(cell12)
-    
-    frame1.pack(side=TOP, padx=5, pady=5)
-    frame2.pack(side=TOP, padx=5, pady=5)
-    frame3.pack(side=TOP, padx=5, pady=5)
+    show_stuff(frame1)
+    show_stuff(frame2)
+    show_stuff(frame3)
     
     
     
