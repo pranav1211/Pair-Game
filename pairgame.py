@@ -58,7 +58,7 @@ howto = Button(root,text="How to Play",
                font=("Arial",25),
                bg="black",
                fg='white',
-               padx=40,
+               padx=38,
                command=lambda:howtoplayinst(start,quitgame,howto))
 howto.pack(padx=20)
 
