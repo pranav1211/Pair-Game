@@ -53,7 +53,7 @@ def checker(value,cellname):
     cellname.config(text=value)
     
     a = [0]
-    b = [0]
+    b = [32]
     
     i=0
         
