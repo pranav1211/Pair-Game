@@ -207,7 +207,7 @@ cell8 = Button(root,text="8",
                fg='white',)
 cell8.pack()
 
-cellfiller2 = Button(root,text="",
+cellfiller2 = Label(root,text="",
                 font=("Arial",25),
                 bg="green",)
 cellfiller2.pack()
