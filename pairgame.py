@@ -18,6 +18,9 @@ def filler():
     hide_stuff(cell11)
     hide_stuff(cell12)
     
+    hide_stuff(cellfiller1)
+    hide_stuff(cellfiller2)
+    
         
 
 
@@ -165,6 +168,9 @@ cell4 = Label(root,text="4",
 cell4.pack()
 
 cellfiller1 = Label(root,text="")
+cellfiller1.pack()
+
+#############################################################
 
 cell5 = Label(root,text="5",
               font=("Arial",25),
@@ -189,6 +195,11 @@ cell8 = Label(root,text="8",
                bg="black",
                fg='white',)
 cell8.pack()
+
+cellfiller2 = Label(root,text="")
+cellfiller2.pack()
+
+########################################################
 
 cell9 = Label(root,text="9",
               font=("Arial",25),
