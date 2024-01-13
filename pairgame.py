@@ -61,7 +61,7 @@ def checker(value,cellname):
         
     elif countvar.get() == 2:
         storevar2.set(value)
-        storecelllastnum.set(cellname)
+        
         
         if storevar1.get() == storevar2.get():
             
