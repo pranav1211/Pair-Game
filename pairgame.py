@@ -101,6 +101,7 @@ cell1 = Label(root,text="1",
               font=("Arial",25),
                bg="black",
                fg='white',)
+cell1.pack()
 
 
 
