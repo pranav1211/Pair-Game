@@ -209,7 +209,7 @@ cell8.pack()
 
 cellfiller2 = Label(root,text="",
                 font=("Arial",25),
-                bg="green",)
+                bg="green")
 cellfiller2.pack()
 
 ########################################################
