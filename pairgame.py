@@ -74,6 +74,8 @@ def checker(value,cellname):
         
         else:
             cellname.config(text="?")
+            celltest = "cell" + str(storevar1.get())
+            celltest.config(text="?")
             
             storevar1.set(0)
             storevar2.set(0)
