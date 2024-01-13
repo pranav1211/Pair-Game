@@ -1,21 +1,17 @@
 import tkinter as tk
 
-def button_clicked(button_number):
-    print(f"Button {button_number} clicked!")
+def button_click():
+    print("Button clicked!")
 
 # Create the main window
 root = tk.Tk()
-root.title("Centered Buttons")
+root.title("Button Grid")
 
-# Create three buttons
-button1 = tk.Button(root, text="Button 1", command=lambda: button_clicked(1))
-button2 = tk.Button(root, text="Button 2", command=lambda: button_clicked(2))
-button3 = tk.Button(root, text="Button 3", command=lambda: button_clicked(3))
+# Create and pack buttons in 3 rows and 4 columns
+for i in range(3):
+    for j in range(4):
+        button = tk.Button(root, text=f"Button {i*4 + j + 1}", command=button_click)
+        button.pack(side=tk.LEFT, padx=5, pady=5)
 
-# Pack the buttons with some space between them
-button1.pack(side=tk.LEFT, padx=10)
-button2.pack(side=tk.LEFT, padx=10)
-button3.pack(side=tk.LEFT, padx=10)
-
-# Start the main loop
+# Start the Tkinter event loop
 root.mainloop()
