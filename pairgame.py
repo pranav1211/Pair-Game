@@ -37,6 +37,8 @@ def startgame():
     hide_stuff(howto)
     hide_stuff(quitgame)
     
+    show_stuff(score)
+    
     show_stuff(frame1)
     show_stuff(frame2)
     show_stuff(frame3)
