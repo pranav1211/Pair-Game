@@ -156,7 +156,7 @@ cell1 = Label(root,text="1",
               font=("Arial",25),
                bg="black",
                fg='white',)
-cell1.pack()
+cell1.pack(pady=20)
 
 cell2 = Label(root,text="2",
               font=("Arial",25),
