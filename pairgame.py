@@ -17,8 +17,6 @@ def filler():
     hide_stuff(cell10)
     hide_stuff(cell11)
     hide_stuff(cell12)    
-    hide_stuff(cellfiller1)
-    hide_stuff(cellfiller2)
     
         
 
@@ -52,12 +50,10 @@ def startgame():
     show_stuff(cell2)
     show_stuff(cell3)
     show_stuff(cell4)
-    show_stuff(cellfiller1)
     show_stuff(cell5)
     show_stuff(cell6)
     show_stuff(cell7)
     show_stuff(cell8)
-    show_stuff(cellfiller2)
     show_stuff(cell9)
     show_stuff(cell10)
     show_stuff(cell11)
@@ -69,14 +65,14 @@ def startgame():
     cell3.pack(side=LEFT)
     cell4.pack(side=TOP)
     
-    cellfiller1.pack()
+
     
     cell5.pack(side=LEFT)
     cell6.pack(side=LEFT)
     cell7.pack(side=LEFT)
     cell8.pack(side=LEFT)
+
     
-    cellfiller2.pack()
     
     cell9.pack(side=LEFT)
     cell10.pack(side=LEFT)
@@ -151,6 +147,9 @@ backhome = Button(root,text="Back",
 # game section:
 
 
+frame = Frame(root)
+frame.pack(side=TOP, padx=5, pady=5)
+
 cell1 = Button(root,text="1",
               font=("Arial",25),
                bg="black",
@@ -174,11 +173,6 @@ cell4 = Button(root,text="4",
                bg="black",
                fg='white',)
 cell4.pack()
-
-cellfiller1 = Label(root,text="",
-                    font=("Arial",25),
-                    bg="green",)
-cellfiller1.pack()
 
 #############################################################
 
@@ -205,11 +199,6 @@ cell8 = Button(root,text="8",
                bg="black",
                fg='white',)
 cell8.pack()
-
-cellfiller2 = Label(root,text="",
-                font=("Arial",25),
-                bg="green")
-cellfiller2.pack()
 
 ########################################################
 
