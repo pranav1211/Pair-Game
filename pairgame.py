@@ -129,7 +129,7 @@ cell1 = Button(frame1,text="?",
               font=("Arial",25),
                bg="black",
                fg='white',
-               command=lambda:checker(1))
+               command=lambda:checker(1,cell1))
 cell1.pack(side=LEFT,
            padx=10,
            pady=10)
