@@ -54,9 +54,12 @@ def checker(value,cellname):
     
     if countvar.get() == 1:
         storevar1.set(value)
+        storecell1.set(value)
         countvar.set(2)
+        
     elif countvar.get() == 2:
         storevar2.set(value)
+        storecell2.set(value)
         
         if storevar1.get() == storevar2.get():
             scorevar.set(scorevar.get() + 100)
