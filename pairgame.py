@@ -53,8 +53,10 @@ def checker(value,cellname):
     cellname.config(text=value)
     
     a = [0,0,0,0]
+    
+    a[0] = value
         
-    score.config(text=value)
+    score.config(text=a[0])
     
     
 
