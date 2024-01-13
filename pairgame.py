@@ -83,7 +83,7 @@ def startgame():
     cell11.pack(side=LEFT)
     cell12.pack(side=LEFT)
     
-    cellfiller2()
+    
 
 def hide_stuff(widget):
     widget.pack_forget()
