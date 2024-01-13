@@ -1,58 +1,110 @@
-import tkinter as tk
+from tkinter import *
 
-def button_click():
-    print("Button clicked!")
+def filler():
+    hide_stuff(frame1)
+    hide_stuff(frame2)
+    hide_stuff(frame3)
+    
+def howtoplayinst():
+    hide_stuff(start)
+    hide_stuff(quitgame)
+    hide_stuff(howto)
+    
+    show_stuff(howtotext)
+    show_stuff(backhome)
 
-# Create the main window
-root = tk.Tk()
-root.title("Button Grid")
+def homepage():
+    hide_stuff(howtotext)
+    hide_stuff(backhome)
 
-# Create 3 frames for each row
-frame1 = tk.Frame(root)
-frame1.pack(side=tk.TOP, padx=5, pady=5)
+    show_stuff(start)
+    show_stuff(howto)    
+    show_stuff(quitgame)
 
-frame2 = tk.Frame(root)
-frame2.pack(side=tk.TOP, padx=5, pady=5)
+def startgame():
+    hide_stuff(start)
+    hide_stuff(howto)
+    hide_stuff(quitgame)
+    
+    show_stuff(frame1)
+    show_stuff(frame2)
+    show_stuff(frame3)
 
-frame3 = tk.Frame(root)
-frame3.pack(side=tk.TOP, padx=5, pady=5)
+def hide_stuff(widget):
+    widget.pack_forget()
 
-# Place buttons in each frame
-button1 = tk.Button(frame1, text="Button 1", command=button_click)
-button1.pack(side=tk.LEFT)
+def show_stuff(widget):
+    widget.pack()
 
-button2 = tk.Button(frame1, text="Button 2", command=button_click)
-button2.pack(side=tk.LEFT)
+root  = Tk(className="Pair Game")
+root.geometry('700x700')
+root.configure(bg='green')
+root.title("Match The Pair By Pranav Veeraghanta")
 
-button3 = tk.Button(frame1, text="Button 3", command=button_click)
-button3.pack(side=tk.LEFT)
+# home section
+topfiller = Label(root, text="\n\n\n\n\n\n\n\n\n\n\n\n", bg='green')
+topfiller.pack()
 
-button4 = tk.Button(frame1, text="Button 4", command=button_click)
-button4.pack(side=tk.LEFT)
+start = Button(root, text="Start Game", font=("Arial", 25), bg="black", padx=40, fg='white', command=lambda: startgame())
+start.pack(padx=24, pady=20)
 
-button5 = tk.Button(frame2, text="Button 5", command=button_click)
-button5.pack(side=tk.LEFT)
+howto = Button(root, text="How to Play", font=("Arial", 25), bg="black", fg='white', padx=37, command=lambda: howtoplayinst())
+howto.pack(padx=20)
 
-button6 = tk.Button(frame2, text="Button 6", command=button_click)
-button6.pack(side=tk.LEFT)
+quitgame = Button(root, text="Exit", command=quit, font=("Arial", 25), bg="black", padx=95, fg='white')
+quitgame.pack(padx=20, pady=20)
 
-button7 = tk.Button(frame2, text="Button 7", command=button_click)
-button7.pack(side=tk.LEFT)
+# how to play section
+howtotext = Label(root, text="\t     HOW TO PLAY\n\n1. Click on any 2 squares to reveal a number.\n\n2.If the numbers match you will get 100 points.\n\n3. If the numbers don't match the squares\n    will be hidden and you can try again.\n\n4. You have infinite number of tries!!!\n\n",
+                  font=('Arial', 15), bg='green', fg='white', padx=95, justify=LEFT)
 
-button8 = tk.Button(frame2, text="Button 8", command=button_click)
-button8.pack(side=tk.LEFT)
+backhome = Button(root, text="Back", font=("Arial", 25), bg="black", fg='white', padx=90, command=lambda: homepage())
 
-button9 = tk.Button(frame3, text="Button 9", command=button_click)
-button9.pack(side=tk.LEFT)
+# game section:
+frame1 = Frame(root)
+frame1.pack(side=TOP, padx=5, pady=5)
 
-button10 = tk.Button(frame3, text="Button 10", command=button_click)
-button10.pack(side=tk.LEFT)
+frame2 = Frame(root)
+frame2.pack(side=TOP, padx=5, pady=5)
 
-button11 = tk.Button(frame3, text="Button 11", command=button_click)
-button11.pack(side=tk.LEFT)
+frame3 = Frame(root)
+frame3.pack(side=TOP, padx=5, pady=5)
 
-button12 = tk.Button(frame3, text="Button 12", command=button_click)
-button12.pack(side=tk.LEFT)
+cell1 = Button(frame1, text="1", font=("Arial", 25), bg="black", fg='white')
+cell1.pack(side=LEFT)
 
-# Start the Tkinter event loop
+cell2 = Button(frame1, text="2", font=("Arial", 25), bg="black", fg='white')
+cell2.pack(side=LEFT)
+
+cell3 = Button(frame1, text="3", font=("Arial", 25), bg="black", fg='white')
+cell3.pack(side=LEFT)
+
+cell4 = Button(frame1, text="4", font=("Arial", 25), bg="black", fg='white')
+cell4.pack(side=LEFT)
+
+cell5 = Button(frame2, text="5", font=("Arial", 25), bg="black", fg='white')
+cell5.pack(side=LEFT)
+
+cell6 = Button(frame2, text="6", font=("Arial", 25), bg="black", fg='white')
+cell6.pack(side=LEFT)
+
+cell7 = Button(frame2, text="7", font=("Arial", 25), bg="black", fg='white')
+cell7.pack(side=LEFT)
+
+cell8 = Button(frame2, text="8", font=("Arial", 25), bg="black", fg='white')
+cell8.pack(side=LEFT)
+
+cell9 = Button(frame3, text="9", font=("Arial", 25), bg="black", fg='white')
+cell9.pack(side=LEFT)
+
+cell10 = Button(frame3, text="10", font=("Arial", 25), bg="black", fg='white')
+cell10.pack(side=LEFT)
+
+cell11 = Button(frame3, text="11", font=("Arial", 25), bg="black", fg='white')
+cell11.pack(side=LEFT)
+
+cell12 = Button(frame3, text="12", font=("Arial", 25), bg="black", fg='white')
+cell12.pack(side=LEFT)
+
+filler()
 root.mainloop()
