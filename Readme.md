@@ -4,4 +4,4 @@
 4. Click on game.exe to play the game.
 5. Here is the answer for the first Level :
 
-   <img src="https://beyondmebtw.com/projects/pairgame/level1ans.png" alt="level 1 answer">
+   <img src="https://beyondmebtw.com/projects/pairgame/level1ans.png" alt="level 1 answer" >
