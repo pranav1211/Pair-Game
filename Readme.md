@@ -8,6 +8,7 @@
    <img src="https://beyondmebtw.com/projects/pairgame/answer.png" alt="level 1 answer">
 
 7. Here is the answer for the second level :
+   
    <img src="https://beyondmebtw.com/projects/pairgame/answer2.png" alt="level 2 answer">
    
 
