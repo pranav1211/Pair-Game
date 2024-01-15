@@ -1,17 +1,20 @@
-from tkinter import *
-root = Tk()
+import tkinter as tk
 
-def message():
-    L['text'] = 'I LIKE ICE CREAM'
+def button_click():
+    label.config(text="Button Clicked!")
 
-def delay():
-    L['text'] = 'Wait for it...'
-    root.after(2000, message)
+root = tk.Tk()
+root.title("Button with Image")
 
-L = Label(root, text="Please click the button.")
-L.pack()
+# Create a PhotoImage object from an image file (make sure the file path is correct)
+image = tk.PhotoImage(file="path/to/your/image.png")
 
-B = Button(root, text="button", command=delay)
-B.pack()
+# Create a Button with the image
+button = tk.Button(root, image=image, command=button_click)
+button.pack(pady=10)
+
+# Create a Label to display a message when the button is clicked
+label = tk.Label(root, text="")
+label.pack(pady=10)
 
 root.mainloop()

@@ -1,4 +1,6 @@
 from tkinter import *
+from urllib import request
+from io import BytesIO
 
 def filler():
 
@@ -14,7 +16,8 @@ def filler():
     hide_stuff(prize_text)
     hide_stuff(prize_button)
       
-
+def quitthegame():
+    root.destroy()
 
 def howtoplayinst(startt,quit,howtoo):
     hide_stuff(startt)
@@ -247,12 +250,19 @@ topfiller = Label(root,text="\n\n\n\n\n\n\n\n\n\n\n\n",
                   bg='green')
 topfiller.pack()
 
+image_url = "https://beyondmebtw.com/projects/pairgame/level1ans.png"
+response = request.urlopen(image_url)
+data = response.read()
+imagefromurl = Image.open(BytesIO(data))
+
+newimage = PhotoImage(imagefromurl)
 
 start = Button(root,text="Start Game",
                font=("Times",25),
-               bg="black",
+               bg="green",
                padx=40,
                fg='white',
+               image=newimage,
                command=lambda:startgame())
 start.pack(padx=24,pady=20)
 
@@ -266,7 +276,7 @@ howto.pack(padx=20)
 
 
 quitgame = Button(root,text="Exit",
-                  command=quit,
+                  command=lambda:quitthegame(),
                   font=("Times",25),
                    bg="black",
                    padx=95,
