@@ -13,6 +13,7 @@ def filler():
     
     hide_stuff(prize_text)
     hide_stuff(prize_button)
+    hide_stuff(playagainbutton)
       
 def quitthegame():
     root.destroy()
@@ -21,6 +22,7 @@ def howtoplayinst(startt,quit,howtoo):
     hide_stuff(startt)
     hide_stuff(quit)
     hide_stuff(howtoo)
+    
         
     show_stuff(howtotext)
     show_stuff(backhome)
@@ -41,11 +43,70 @@ def startgame():
     hide_stuff(howto)
     hide_stuff(quitgame)
     
+    show_stuff(howtotext)
+    howtotext.pack(side=BOTTOM,anchor="s")
+    howtotext.config(font=20,bg='orange')
+    
+    # hide_stuff(topfiller)
+    topfiller.config(bg='orange')
+    
     show_stuff(score)
     
     show_stuff(frame1)
     show_stuff(frame2)
     show_stuff(frame3)
+    
+    score.pack(side=TOP,anchor='n')
+    frame1.pack(side=TOP,anchor='n')
+    frame2.pack(side=TOP,anchor='n')
+    frame3.pack(side=TOP,anchor='n')
+    
+    root.config(bg="orange")
+    
+def playagain():
+    hide_stuff(playagainbutton)
+    
+    hide_stuff(score)
+    solvedvar.set(0)
+    storecell1.set("0")
+    storecell1.set("0")
+    storevar1.set(0)
+    storevar2.set(0)
+    scorevar.set(0)
+    score.config(text="Score : 0")
+    
+    show_stuff(score)
+    show_stuff(frame1)
+    show_stuff(frame2)
+    show_stuff(frame3)
+    show_stuff(howtotext)
+    
+    
+    howtotext.pack(side=BOTTOM,anchor="s")
+    howtotext.config(font=20,bg='orange')
+    
+    score.pack(side=TOP,anchor='n')
+    frame1.pack(side=TOP,anchor='n')
+    frame2.pack(side=TOP,anchor='n')
+    frame3.pack(side=TOP,anchor='n')
+            
+    hide_stuff(prize_text)
+    hide_stuff(prize_button)
+    
+    cell1.config(text="?",bg="black",command=lambda:checker(1,cell1,"cell1"))
+    cell2.config(text="?",bg="black",command=lambda:checker(2,cell2,"cell2"))
+    cell3.config(text="?",bg="black",command=lambda:checker(5,cell3,"cell3"))
+    cell4.config(text="?",bg="black",command=lambda:checker(4,cell4,"cell4"))
+            
+    cell5.config(text="?",bg="black",command=lambda:checker(2,cell5,"cell5"))
+    cell6.config(text="?",bg="black",command=lambda:checker(1,cell6,"cell6"))
+    cell7.config(text="?",bg="black",command=lambda:checker(3,cell7,"cell7"))
+    cell8.config(text="?",bg="black",command=lambda:checker(6,cell8,"cell8"))
+            
+    cell9.config(text="?",bg="black",command=lambda:checker(3,cell9,"cell9"))
+    cell10.config(text="?",bg="black",command=lambda:checker(6,cell10,"cell10"))
+    cell11.config(text="?",bg="black",command=lambda:checker(4,cell11,"cell11"))
+    cell12.config(text="?",bg="black",command=lambda:checker(5,cell12,"cell12"))
     
 def hide_stuff(widget):
     widget.pack_forget()
@@ -86,114 +147,115 @@ def checker(value,cellname,cellstr):
         
         elif storevar1.get() != storevar2.get():
             
-            cellname.config(text="?",bg="black")
-                      
             countvar.set(1)
             
             storevar1.set(0)
             storevar2.set(0)
             
-            if storecell1.get() == "cell1":
-                cell1.config(text="?",bg="black")
-                cell1.config(command=lambda:checker(1,cell1,"cell1"))
+            def delaycellname():            
+                cellname.config(text="?",bg="black")
             
-            elif storecell1.get() == "cell2":
-                cell2.config(text="?",bg="black")
-                cell2.config(command=lambda:checker(2,cell2,"cell2"))
-                
-            elif storecell1.get() == "cell3":
-                cell3.config(text="?",bg="black")
-                cell3.config(command=lambda:checker(5,cell3,"cell3"))
-                
-            elif storecell1.get() == "cell4":
-                cell4.config(text="?",bg="black")
-                cell4.config(command=lambda:checker(4,cell4,"cell4"))
-                
-            elif storecell1.get() == "cell5":
-                cell5.config(text="?",bg="black")
-                cell5.config(command=lambda:checker(2,cell5,"cell5"))
-                
-            elif storecell1.get() == "cell6":
-                cell6.config(text="?",bg="black")
-                cell6.config(command=lambda:checker(1,cell6,"cell6"))
+                if storecell1.get() == "cell1":
+                    cell1.config(text="?",bg="black")
+                    cell1.config(command=lambda:checker(1,cell1,"cell1"))
             
-            elif storecell1.get() == "cell7":
-                cell7.config(text="?",bg="black")
-                cell7.config(command=lambda:checker(3,cell7,"cell7"))
+                elif storecell1.get() == "cell2":
+                   cell2.config(text="?",bg="black")
+                   cell2.config(command=lambda:checker(2,cell2,"cell2"))
                 
-            elif storecell1.get() == "cell8":
-                cell8.config(text="?",bg="black")
-                cell8.config(command=lambda:checker(6,cell8,"cell8"))
+                elif storecell1.get() == "cell3":
+                    cell3.config(text="?",bg="black")
+                    cell3.config(command=lambda:checker(5,cell3,"cell3"))
                 
-            elif storecell1.get() == "cell9":
-                cell9.config(text="?",bg="black")
-                cell9.config(command=lambda:checker(3,cell9,"cell9"))
+                elif storecell1.get() == "cell4":
+                    cell4.config(text="?",bg="black")
+                    cell4.config(command=lambda:checker(4,cell4,"cell4"))
                 
-            elif storecell1.get() == "cell10":
-                cell10.config(text="?",bg="black")
-                cell10.config(command=lambda:checker(6,cell10,"cell10"))
+                elif storecell1.get() == "cell5":
+                    cell5.config(text="?",bg="black")
+                    cell5.config(command=lambda:checker(2,cell5,"cell5"))
                 
-            elif storecell1.get() == "cell11":
-                cell11.config(text="?",bg="black")
-                cell11.config(command=lambda:checker(4,cell11,"cell11"))
-                
-            elif storecell1.get() == "cell12":
-                cell12.config(text="?",bg="black")
-                cell12.config(command=lambda:checker(5,cell12,"cell12"))
-                
-                ##############################################
-            if storecell2.get() == "cell1":
-                cell1.config(text="?",bg="black")
-                cell1.config(command=lambda:checker(1,cell1,"cell1"))
+                elif storecell1.get() == "cell6":
+                    cell6.config(text="?",bg="black")
+                    cell6.config(command=lambda:checker(1,cell6,"cell6"))
             
-            elif storecell2.get() == "cell2":
-                cell2.config(text="?",bg="black")
-                cell2.config(command=lambda:checker(2,cell2,"cell2"))
+                elif storecell1.get() == "cell7":
+                    cell7.config(text="?",bg="black")
+                    cell7.config(command=lambda:checker(3,cell7,"cell7"))
                 
-            elif storecell2.get() == "cell3":
-                cell3.config(text="?",bg="black")
-                cell3.config(command=lambda:checker(5,cell3,"cell3"))
+                elif storecell1.get() == "cell8":
+                    cell8.config(text="?",bg="black")
+                    cell8.config(command=lambda:checker(6,cell8,"cell8"))
                 
-            elif storecell2.get() == "cell4":
-                cell4.config(text="?",bg="black")
-                cell4.config(command=lambda:checker(4,cell4,"cell4"))
+                elif storecell1.get() == "cell9":
+                    cell9.config(text="?",bg="black")
+                    cell9.config(command=lambda:checker(3,cell9,"cell9"))
                 
-            elif storecell2.get() == "cell5":
-                cell5.config(text="?",bg="black")
-                cell5.config(command=lambda:checker(2,cell5,"cell5"))
+                elif storecell1.get() == "cell10":
+                    cell10.config(text="?",bg="black")
+                    cell10.config(command=lambda:checker(6,cell10,"cell10"))
                 
-            elif storecell2.get() == "cell6":
-                cell6.config(text="?",bg="black")
-                cell6.config(command=lambda:checker(1,cell6,"cell6"))
+                elif storecell1.get() == "cell11":
+                    cell11.config(text="?",bg="black")
+                    cell11.config(command=lambda:checker(4,cell11,"cell11"))
+                
+                elif storecell1.get() == "cell12":
+                    cell12.config(text="?",bg="black")
+                    cell12.config(command=lambda:checker(5,cell12,"cell12"))
+                
+                    ##############################################
+                if storecell2.get() == "cell1":
+                    cell1.config(text="?",bg="black")
+                    cell1.config(command=lambda:checker(1,cell1,"cell1"))
             
-            elif storecell2.get() == "cell7":
-                cell7.config(text="?",bg="black")
-                cell7.config(command=lambda:checker(3,cell7,"cell7"))
+                elif storecell2.get() == "cell2":
+                    cell2.config(text="?",bg="black")
+                    cell2.config(command=lambda:checker(2,cell2,"cell2"))
                 
-            elif storecell2.get() == "cell8":
-                cell8.config(text="?",bg="black")
-                cell8.config(command=lambda:checker(6,cell8,"cell8"))
+                elif storecell2.get() == "cell3":
+                    cell3.config(text="?",bg="black")
+                    cell3.config(command=lambda:checker(5,cell3,"cell3"))
                 
-            elif storecell2.get() == "cell9":
-                cell9.config(text="?",bg="black")
-                cell9.config(command=lambda:checker(3,cell9,"cell9"))
+                elif storecell2.get() == "cell4":
+                    cell4.config(text="?",bg="black")
+                    cell4.config(command=lambda:checker(4,cell4,"cell4"))
                 
-            elif storecell2.get() == "cell10":
-                cell10.config(text="?",bg="black")
-                cell10.config(command=lambda:checker(6,cell10,"cell10"))
+                elif storecell2.get() == "cell5":
+                    cell5.config(text="?",bg="black")
+                    cell5.config(command=lambda:checker(2,cell5,"cell5"))
                 
-            elif storecell2.get() == "cell11":
-                cell11.config(text="?",bg="black")
-                cell11.config(command=lambda:checker(4,cell11,"cell11"))
+                elif storecell2.get() == "cell6":
+                    cell6.config(text="?",bg="black")
+                    cell6.config(command=lambda:checker(1,cell6,"cell6"))
+            
+                elif storecell2.get() == "cell7":
+                    cell7.config(text="?",bg="black")
+                    cell7.config(command=lambda:checker(3,cell7,"cell7"))
                 
-            elif storecell2.get() == "cell12":
-                cell12.config(text="?",bg="black")
-                cell12.config(command=lambda:checker(5,cell12,"cell12"))
+                elif storecell2.get() == "cell8":
+                    cell8.config(text="?",bg="black")
+                    cell8.config(command=lambda:checker(6,cell8,"cell8"))
+                
+                elif storecell2.get() == "cell9":
+                    cell9.config(text="?",bg="black")
+                    cell9.config(command=lambda:checker(3,cell9,"cell9"))
+                
+                elif storecell2.get() == "cell10":
+                    cell10.config(text="?",bg="black")
+                    cell10.config(command=lambda:checker(6,cell10,"cell10"))
+                
+                elif storecell2.get() == "cell11":
+                    cell11.config(text="?",bg="black")
+                    cell11.config(command=lambda:checker(4,cell11,"cell11"))
+                
+                elif storecell2.get() == "cell12":
+                    cell12.config(text="?",bg="black")
+                    cell12.config(command=lambda:checker(5,cell12,"cell12"))
                       
-                       
+            root.after(900,delaycellname)
                         
     if(solvedvar.get()==6):
-        score.config(text="complete")
+        score.config(text="Completed")
                        
         def delay():
             hide_stuff(score)
@@ -204,20 +266,31 @@ def checker(value,cellname,cellstr):
             
             show_stuff(prize_text)
             show_stuff(prize_button)
+            show_stuff(playagainbutton)
+            playagainbutton.pack(pady=20)
+            hide_stuff(howtotext)
             
                                 
         root.after(2000,delay)
 
 def prize():
-    prize_button.config(text="NOTHING",bg="blue")
+    prize_button.config(text="NOTHING",bg="blue",fg='white')
     
 
 ##########################################################################
 
+
+
 root  = Tk(className="Pair Game")
-root.geometry('700x700')
-root.configure(bg='green')
+root.geometry('900x900')
+root.configure(bg='violet')
 root.title("Match The Pair By Pranav Veeraghanta")
+
+# image = PhotoImage(file="bgtest.jpg")
+# canvas1 = Canvas(root,width=700,height=700)
+# canvas1.pack(fill="both",expand=True)
+# canvas1.create_image( 0, 0, image = image,  
+#                      anchor = "nw") 
 
 # global variables
 
@@ -245,7 +318,7 @@ solvedvar.set(0)
 # home section
 
 topfiller = Label(root,text="\n\n\n\n\n\n\n\n\n\n\n\n",
-                  bg='green')
+                  bg='violet')
 topfiller.pack()
 
 start = Button(root,text="Start Game",
@@ -268,7 +341,7 @@ howto.pack(padx=20)
 quitgame = Button(root,text="Exit",
                   command=lambda:quitthegame(),
                   font=("Times",25),
-                   bg="red",
+                   bg="black",
                    padx=90,
                    fg='white')
 quitgame.pack(padx=20,pady=20)
@@ -276,9 +349,9 @@ quitgame.pack(padx=20,pady=20)
 # how to play section
 
 howtotext = Label(root,text="\t        HOW TO PLAY\n\n  1. Click on any 2 squares to reveal a number.\n\n  2. If the numbers match you get 100 points.\n\n  3. If the numbers don't match the squares\n\n      will be hidden and you can try again.\n\n  4. You have infinite number of tries!!!\n\n",
-                  font=('Times',15),
-                  bg='green',
-                  fg='white',
+                  font=('Times',20,'bold'),
+                  bg='violet',
+                  fg='black',
                   justify=LEFT)
 howtotext.pack(side=TOP)
 
@@ -294,24 +367,24 @@ backhome = Button(root,text="Back",
 # game section:
 
 score = Label(root,text=f"Score: {scorevar.get()}",
-              font=('Times',15),
-              bg='green',
+              font=('MS Gothic',37,'bold'),
+              bg='orange',
               fg='white',)
 score.pack()
 
 # level 1
 
-frame1 = Frame(root,bg='green')
+frame1 = Frame(root,bg='orange')
 frame1.pack(side=TOP, padx=5, pady=5,)
 
-frame2 = Frame(root,bg='green')
+frame2 = Frame(root,bg='orange')
 frame2.pack(side=TOP, padx=5, pady=5)
 
-frame3 = Frame(root,bg='green')
+frame3 = Frame(root,bg='orange')
 frame3.pack(side=TOP, padx=5, pady=5)
 
 cell1 = Button(frame1,text="?",
-              font=("Times",25),
+              font=("Times",30),
                bg="black",
                fg='white',
                command=lambda:checker(1,cell1,"cell1"))
@@ -320,7 +393,7 @@ cell1.pack(side=LEFT,
            pady=10)
 
 cell2 = Button(frame1,text="?",
-              font=("Times",25),
+              font=("Times",30),
                bg="black",
                fg='white',
                command=lambda:checker(2,cell2,"cell2"))
@@ -329,7 +402,7 @@ cell2.pack(side=LEFT,
            pady=10)
 
 cell3 = Button(frame1,text="?",
-              font=("Times",25),
+              font=("Times",30),
                bg="black",
                fg='white',
                command=lambda:checker(5,cell3,"cell3"))
@@ -338,7 +411,7 @@ cell3.pack(side=LEFT,
            pady=10)
 
 cell4 = Button(frame1,text="?",
-              font=("Times",25),
+              font=("Times",30),
                bg="black",
                fg='white',
                command=lambda:checker(4,cell4,"cell4"))
@@ -349,7 +422,7 @@ cell4.pack(side=LEFT,
 #############################################################
 
 cell5 = Button(frame2,text="?",
-              font=("Times",25),
+              font=("Times",30),
                bg="black",
                fg='white',
                command=lambda:checker(2,cell5,"cell5"))
@@ -358,7 +431,7 @@ cell5.pack(side=LEFT,
            pady=10)
 
 cell6 = Button(frame2,text="?",
-              font=("Times",25),
+              font=("Times",30),
                bg="black",
                fg='white',
                command=lambda:checker(1,cell6,"cell6"))
@@ -367,7 +440,7 @@ cell6.pack(side=LEFT,
            pady=10)
 
 cell7 = Button(frame2,text="?",
-              font=("Times",25),
+              font=("Times",30),
                bg="black",
                fg='white',
                command=lambda:checker(3,cell7,"cell7"))
@@ -376,7 +449,7 @@ cell7.pack(side=LEFT,
            pady=10)
 
 cell8 = Button(frame2,text="?",
-              font=("Times",25),
+              font=("Times",30),
                bg="black",
                fg='white',
                command=lambda:checker(6,cell8,"cell8"))
@@ -387,7 +460,7 @@ cell8.pack(side=LEFT,
 ########################################################
 
 cell9 = Button(frame3,text="?",
-              font=("Times",25),
+              font=("Times",30),
                bg="black",
                fg='white',
                command=lambda:checker(3,cell9,"cell9"))
@@ -396,7 +469,7 @@ cell9.pack(side=LEFT,
            pady=10)
 
 cell10 = Button(frame3,text="?",
-              font=("Times",25),
+              font=("Times",30),
                bg="black",
                fg='white',
                command=lambda:checker(6,cell10,"cell10"))
@@ -405,7 +478,7 @@ cell10.pack(side=LEFT,
            pady=10)
 
 cell11 = Button(frame3,text="?",
-              font=("Times",25),
+              font=("Times",30),
                bg="black",
                fg='white',
                command=lambda:checker(4,cell11,"cell11"))
@@ -414,7 +487,7 @@ cell11.pack(side=LEFT,
            pady=10)
 
 cell12 = Button(frame3,text="?",
-              font=("Times",25),
+              font=("Times",30),
                bg="black",
                fg='white',
                command=lambda:checker(5,cell12,"cell12"))
@@ -424,14 +497,20 @@ cell12.pack(side=LEFT,
 
 ## prize screen
 
-prize_text = Label(root,text="Congratulations!!!\n     You've Won:\n",font=('Times',25),bg='green',fg='white',padx=95,justify=LEFT)
+prize_text = Label(root,text="  Congratulations!!!\n\n      You've Won:\n",font=('Times',25,'bold'),bg='orange',fg='white',padx=95,justify=LEFT)
 prize_text.pack()
 
 prize_button = Button(root,text="CLICK ME",font=("Times",25),
-               bg="black",
-               fg='white',
+               bg="violet",
+               fg='black',
                command=lambda:prize())
 prize_button.pack()
+
+playagainbutton = Button(root,text="Play Again",font=("Times",25),
+               bg="black",
+               fg='white',
+               command=lambda:playagain())
+playagainbutton.pack(pady=20)
 
 filler()
 
