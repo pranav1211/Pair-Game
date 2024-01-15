@@ -80,6 +80,7 @@ def startgame():
 def playagain():
     hide_stuff(playagainbutton)
     
+    
     solvedvar.set(0)
     storecell1.set("0")
     storecell1.set("0")
@@ -99,7 +100,7 @@ def playagain():
     frame3.pack(side=TOP,anchor='n')
             
     hide_stuff(prize_text)
-    hide_stuff(prize_button)
+    hide_stuff(prize_button)    
     
     cell1.config(text="?",bg="black",command=lambda:checker(1,cell1,"cell1"))
     cell2.config(text="?",bg="black",command=lambda:checker(2,cell2,"cell2"))
@@ -147,7 +148,7 @@ def show_stuff(widget):
     widget.pack()
     
 def checker(value,cellname,cellstr):
-#     solvedvar.set(6)
+    #solvedvar.set(6)
     cellname.config(text=value,bg='blue')
 
     if countvar.get() == 1:
@@ -321,7 +322,7 @@ def checker(value,cellname,cellstr):
             displaylevel2()
             
                                 
-        root.after(2000,delay)
+        root.after(1000,delay)
 
 def displaylevel2():
     hide_stuff(howtotext)
@@ -349,7 +350,7 @@ def displaylevel2():
 
 def checker2(value,cellname,cellstr):
     cellname.config(text=value,bg='blue')
-    # solvedvar.set(10)
+    #solvedvar.set(10)
     if countvar.get() == 1:
         storevar1.set(value)
         cellname.config(command=())
@@ -505,7 +506,7 @@ def checker2(value,cellname,cellstr):
             hide_stuff(nooftriestext)
             hide_stuff(level2text)
                                 
-        root.after(2000,delay)   
+        root.after(1000,delay)   
         
 def prize():
     prize_button.config(text="NOTHING",bg="blue",fg='white')
