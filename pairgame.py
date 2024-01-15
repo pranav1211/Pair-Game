@@ -11,6 +11,11 @@ def filler():
     hide_stuff(frame2)
     hide_stuff(frame3)
     
+    hide_stuff(frame4)
+    hide_stuff(frame5)
+    hide_stuff(frame6)
+    hide_stuff(frame7)
+    
     hide_stuff(prize_text)
     hide_stuff(prize_button)
     hide_stuff(playagainbutton)
@@ -44,8 +49,8 @@ def startgame():
     hide_stuff(quitgame)
     
     show_stuff(howtotext)
-    howtotext.pack(side=BOTTOM,anchor="s")
-    howtotext.config(font=20,bg='orange')
+    howtotext.pack(side=BOTTOM,anchor="e")
+    howtotext.config(font=('Times',15,'bold'),bg='orange')
     
     # hide_stuff(topfiller)
     topfiller.config(bg='orange')
@@ -107,6 +112,30 @@ def playagain():
     cell10.config(text="?",bg="black",command=lambda:checker(6,cell10,"cell10"))
     cell11.config(text="?",bg="black",command=lambda:checker(4,cell11,"cell11"))
     cell12.config(text="?",bg="black",command=lambda:checker(5,cell12,"cell12"))
+    
+    l2cell1.config(text="?",bg="black",command=lambda:checker2(1,l2cell1,"l2cell1"))
+    l2cell2.config(text="?",bg="black",command=lambda:checker2(9,l2cell2,"l2cell2"))
+    l2cell3.config(text="?",bg="black",command=lambda:checker2(7,l2cell3,"l2cell3"))
+    l2cell4.config(text="?",bg="black",command=lambda:checker2(6,l2cell4,"l2cell4"))
+    l2cell5.config(text="?",bg="black",command=lambda:checker2(3,l2cell5,"l2cell5"))
+    
+    l2cell6.config(text="?",bg="black",command=lambda:checker2(10,l2cell6,"l2cell6"))
+    l2cell7.config(text="?",bg="black",command=lambda:checker2(4,l2cell7,"l2cell7"))
+    l2cell8.config(text="?",bg="black",command=lambda:checker2(8,l2cell8,"l2cell8"))
+    l2cell9.config(text="?",bg="black",command=lambda:checker2(2,l2cell9,"l2cell9"))
+    l2cell10.config(text="?",bg="black",command=lambda:checker2(5,l2cell10,"l2cell10"))
+    
+    l2cell11.config(text="?",bg="black",command=lambda:checker2(9,l2cell11,"l2cell11"))
+    l2cell12.config(text="?",bg="black",command=lambda:checker2(10,l2cell12,"l2cell12"))
+    l2cell13.config(text="?",bg="black",command=lambda:checker2(1,l2cell13,"l2cell13"))
+    l2cell14.config(text="?",bg="black",command=lambda:checker2(4,l2cell14,"l2cell14"))
+    l2cell15.config(text="?",bg="black",command=lambda:checker2(6,l2cell15,"l2cell15"))
+    
+    l2cell16.config(text="?",bg="black",command=lambda:checker2(3,l2cell16,"l2cell16"))
+    l2cell17.config(text="?",bg="black",command=lambda:checker2(8,l2cell17,"l2cell17"))
+    l2cell18.config(text="?",bg="black",command=lambda:checker2(5,l2cell18,"l2cell18"))
+    l2cell19.config(text="?",bg="black",command=lambda:checker2(7,l2cell19,"l2cell19"))
+    l2cell20.config(text="?",bg="black",command=lambda:checker2(2,l2cell20,"l2cell20"))
     
 def hide_stuff(widget):
     widget.pack_forget()
@@ -255,6 +284,174 @@ def checker(value,cellname,cellstr):
             root.after(900,delaycellname)
                         
     if(solvedvar.get()==6):
+        def delay():
+            # hide_stuff(score)
+    
+            hide_stuff(frame1)
+            hide_stuff(frame2)
+            hide_stuff(frame3)
+            
+            # show_stuff(prize_text)
+            # show_stuff(prize_button)
+            # show_stuff(playagainbutton)
+            # playagainbutton.pack(pady=20)
+            # hide_stuff(howtotext)
+            
+            countvar.set(1)
+            
+            storevar1.set(0)
+            storevar2.set(0)
+            
+            storecell1.set("0")
+            storecell2.set("0")
+            solvedvar.set("0")
+            
+            displaylevel2()
+            
+                                
+        root.after(2000,delay)
+
+def displaylevel2():
+    hide_stuff(frame1)
+    hide_stuff(frame2)
+    hide_stuff(frame3)
+    
+    show_stuff(frame4)
+    show_stuff(frame5)
+    show_stuff(frame6)
+    show_stuff(frame7)
+    
+    solvedvar.set(0)
+
+def checker2(value,cellname,cellstr):
+    cellname.config(text=value,bg='blue')
+
+    if countvar.get() == 1:
+        storevar1.set(value)
+        cellname.config(command=())
+        storecell1.set(cellstr)
+        countvar.set(2)
+
+    else:
+        storevar2.set(value)
+        storecell2.set(cellstr)
+        cellname.config(command=())
+        cellname.config(text=value)
+        
+        if storecell1.get() == storecell2.get():
+            storevar2.set(0)
+        
+        if storevar1.get() == storevar2.get():
+            
+            scorevar.set(scorevar.get() + 100)
+            score.config(text=f"Score: {scorevar.get()}")
+            
+            countvar.set(1)
+            
+            storevar1.set(0)
+            storevar2.set(0)
+            
+            solvedvar.set(solvedvar.get()+1)
+        
+        elif storevar1.get() != storevar2.get():
+            
+            countvar.set(1)
+            
+            storevar1.set(0)
+            storevar2.set(0)
+            
+            def delaycellname2():
+                cellname.config(text="?",bg="black")
+
+                if storecell1.get() == "l2cell1":
+                  l2cell1.config(text="?",bg="black",command=lambda:checker2(1,l2cell1,"l2cell1"))
+                elif storecell1.get() == "l2cell2":
+                    l2cell2.config(text="?",bg="black",command=lambda:checker2(9,l2cell2,"l2cell2"))
+                elif storecell1.get() == "l2cell3":
+                    l2cell3.config(text="?",bg="black",command=lambda:checker2(7,l2cell3,"l2cell3"))
+                elif storecell1.get() == "l2cell4":
+                    l2cell4.config(text="?",bg="black",command=lambda:checker2(6,l2cell4,"l2cell4"))
+                elif storecell1.get() == "l2cell5":
+                    l2cell5.config(text="?",bg="black",command=lambda:checker2(3,l2cell5,"l2cell5"))
+                elif storecell1.get() == "l2cell6":
+                    l2cell6.config(text="?",bg="black",command=lambda:checker2(10,l2cell6,"l2cell6"))
+                elif storecell1.get() == "l2cell7":
+                    l2cell7.config(text="?",bg="black",command=lambda:checker2(4,l2cell7,"l2cell7"))
+                elif storecell1.get() == "l2cell8":
+                    l2cell8.config(text="?",bg="black",command=lambda:checker2(8,l2cell8,"l2cell8"))
+                elif storecell1.get() == "l2cell9":
+                    l2cell9.config(text="?",bg="black",command=lambda:checker2(2,l2cell9,"l2cell9"))
+                elif storecell1.get() == "l2cell10":
+                    l2cell10.config(text="?",bg="black",command=lambda:checker2(5,l2cell10,"l2cell10"))
+                elif storecell1.get() == "l2cell11":
+                    l2cell11.config(text="?",bg="black",command=lambda:checker2(9,l2cell11,"l2cell11"))
+                elif storecell1.get() == "l2cell12":
+                    l2cell12.config(text="?",bg="black",command=lambda:checker2(10,l2cell12,"l2cell12"))
+                elif storecell1.get() == "l2cell13":
+                    l2cell13.config(text="?",bg="black",command=lambda:checker2(1,l2cell13,"l2cell13"))
+                elif storecell1.get() == "l2cell14":
+                    l2cell14.config(text="?",bg="black",command=lambda:checker2(4,l2cell14,"l2cell14"))
+                elif storecell1.get() == "l2cell15":
+                    l2cell15.config(text="?",bg="black",command=lambda:checker2(6,l2cell15,"l2cell15"))
+                elif storecell1.get() == "l2cell16":
+                    l2cell16.config(text="?",bg="black",command=lambda:checker2(3,l2cell16,"l2cell16"))
+                elif storecell1.get() == "l2cell17":
+                    l2cell17.config(text="?",bg="black",command=lambda:checker2(8,l2cell17,"l2cell17"))
+                elif storecell1.get() == "l2cell18":
+                    l2cell18.config(text="?",bg="black",command=lambda:checker2(5,l2cell18,"l2cell18"))
+                elif storecell1.get() == "l2cell19":
+                    l2cell19.config(text="?",bg="black",command=lambda:checker2(7,l2cell19,"l2cell19"))
+                elif storecell1.get() == "l2cell20":
+                    l2cell20.config(text="?",bg="black",command=lambda:checker2(2,l2cell20,"l2cell20"))
+
+                #################################
+                
+                if storecell2.get() == "l2cell1":
+                    l2cell1.config(text="?",bg="black",command=lambda:checker2(1,l2cell1,"l2cell1"))
+                elif storecell2.get() == "l2cell2":
+                    l2cell2.config(text="?",bg="black",command=lambda:checker2(9,l2cell2,"l2cell2"))
+                elif storecell2.get() == "l2cell3":
+                    l2cell3.config(text="?",bg="black",command=lambda:checker2(7,l2cell3,"l2cell3"))
+                elif storecell2.get() == "l2cell4":
+                    l2cell4.config(text="?",bg="black",command=lambda:checker2(6,l2cell4,"l2cell4"))
+                elif storecell2.get() == "l2cell5":
+                    l2cell5.config(text="?",bg="black",command=lambda:checker2(3,l2cell5,"l2cell5"))
+                elif storecell2.get() == "l2cell6":
+                    l2cell6.config(text="?",bg="black",command=lambda:checker2(10,l2cell6,"l2cell6"))
+                elif storecell2.get() == "l2cell7":
+                    l2cell7.config(text="?",bg="black",command=lambda:checker2(4,l2cell7,"l2cell7"))
+                elif storecell2.get() == "l2cell8":
+                    l2cell8.config(text="?",bg="black",command=lambda:checker2(8,l2cell8,"l2cell8"))
+                elif storecell2.get() == "l2cell9":
+                    l2cell9.config(text="?",bg="black",command=lambda:checker2(2,l2cell9,"l2cell9"))
+                elif storecell2.get() == "l2cell10":
+                    l2cell10.config(text="?",bg="black",command=lambda:checker2(5,l2cell10,"l2cell10"))
+                elif storecell2.get() == "l2cell11":
+                    l2cell11.config(text="?",bg="black",command=lambda:checker2(9,l2cell11,"l2cell11"))
+                elif storecell2.get() == "l2cell12":
+                    l2cell12.config(text="?",bg="black",command=lambda:checker2(10,l2cell12,"l2cell12"))
+                elif storecell2.get() == "l2cell13":
+                    l2cell13.config(text="?",bg="black",command=lambda:checker2(1,l2cell13,"l2cell13"))
+                elif storecell2.get() == "l2cell14":
+                    l2cell14.config(text="?",bg="black",command=lambda:checker2(4,l2cell14,"l2cell14"))
+                elif storecell2.get() == "l2cell15":
+                    l2cell15.config(text="?",bg="black",command=lambda:checker2(6,l2cell15,"l2cell15"))
+                elif storecell2.get() == "l2cell16":
+                    l2cell16.config(text="?",bg="black",command=lambda:checker2(3,l2cell16,"l2cell16"))
+                elif storecell2.get() == "l2cell17":
+                    l2cell17.config(text="?",bg="black",command=lambda:checker2(8,l2cell17,"l2cell17"))
+                elif storecell2.get() == "l2cell18":
+                    l2cell18.config(text="?",bg="black",command=lambda:checker2(5,l2cell18,"l2cell18"))
+                elif storecell2.get() == "l2cell19":
+                    l2cell19.config(text="?",bg="black",command=lambda:checker2(7,l2cell19,"l2cell19"))
+                elif storecell2.get() == "l2cell20":
+                    l2cell20.config(text="?",bg="black",command=lambda:checker2(2,l2cell20,"l2cell20"))
+
+            root.after(900,delaycellname2)
+
+
+        
+    if(solvedvar.get()==10):
         score.config(text="Completed")
                        
         def delay():
@@ -264,15 +461,19 @@ def checker(value,cellname,cellstr):
             hide_stuff(frame2)
             hide_stuff(frame3)
             
+            hide_stuff(frame4)
+            hide_stuff(frame5)
+            hide_stuff(frame6)
+            hide_stuff(frame7)
+            
             show_stuff(prize_text)
             show_stuff(prize_button)
             show_stuff(playagainbutton)
             playagainbutton.pack(pady=20)
             hide_stuff(howtotext)
-            
                                 
-        root.after(2000,delay)
-
+        root.after(2000,delay)   
+        
 def prize():
     prize_button.config(text="NOTHING",bg="blue",fg='white')
     
@@ -486,14 +687,66 @@ cell11.pack(side=LEFT,
            padx=10,
            pady=10)
 
-cell12 = Button(frame3,text="?",
-              font=("Times",30),
-               bg="black",
-               fg='white',
-               command=lambda:checker(5,cell12,"cell12"))
-cell12.pack(side=LEFT,
-           padx=10,
-           pady=10)
+cell12 = Button(frame3,text="?",font=("Times",30),bg="black",fg='white',command=lambda:checker(5,cell12,"cell12"))
+cell12.pack(side=LEFT,padx=10,pady=10)
+
+## level 2
+
+frame4 = Frame(root,bg='orange')
+frame4.pack(side=TOP, padx=5, pady=5,)
+
+frame5 = Frame(root,bg='orange')
+frame5.pack(side=TOP, padx=5, pady=5)
+
+frame6 = Frame(root,bg='orange')
+frame6.pack(side=TOP, padx=5, pady=5)
+
+frame7 = Frame(root,bg='orange')
+frame7.pack(side=TOP, padx=5, pady=5)
+
+l2cell1 = Button(frame4,text="?",font=("Times",30),bg="black",fg="white",command=lambda:checker2(1,l2cell1,"l2cell1"))
+l2cell1.pack(side=LEFT,padx=10,pady=10)
+l2cell2 = Button(frame4,text="?",font=("Times",30),bg="black",fg="white",command=lambda:checker2(9,l2cell2,"l2cell2"))
+l2cell2.pack(side=LEFT,padx=10,pady=10)
+l2cell3 = Button(frame4,text="?",font=("Times",30),bg="black",fg="white",command=lambda:checker2(7,l2cell3,"l2cell3"))
+l2cell3.pack(side=LEFT,padx=10,pady=10)
+l2cell4 = Button(frame4,text="?",font=("Times",30),bg="black",fg="white",command=lambda:checker2(6,l2cell4,"l2cell4"))
+l2cell4.pack(side=LEFT,padx=10,pady=10)
+l2cell5 = Button(frame4,text="?",font=("Times",30),bg="black",fg="white",command=lambda:checker2(3,l2cell5,"l2cell5"))
+l2cell5.pack(side=LEFT,padx=10,pady=10)
+
+l2cell6 = Button(frame5,text="?",font=("Times",30),bg="black",fg="white",command=lambda:checker2(10,l2cell6,"l2cell6"))
+l2cell6.pack(side=LEFT,padx=10,pady=10)
+l2cell7 = Button(frame5,text="?",font=("Times",30),bg="black",fg="white",command=lambda:checker2(4,l2cell7,"l2cell7"))
+l2cell7.pack(side=LEFT,padx=10,pady=10)
+l2cell8 = Button(frame5,text="?",font=("Times",30),bg="black",fg="white",command=lambda:checker2(8,l2cell8,"l2cell8"))
+l2cell8.pack(side=LEFT,padx=10,pady=10)
+l2cell9 = Button(frame5,text="?",font=("Times",30),bg="black",fg="white",command=lambda:checker2(2,l2cell9,"l2cell9"))
+l2cell9.pack(side=LEFT,padx=10,pady=10)
+l2cell10 = Button(frame5,text="?",font=("Times",30),bg="black",fg="white",command=lambda:checker2(5,l2cell10,"l2cell10"))
+l2cell10.pack(side=LEFT,padx=10,pady=10)
+
+l2cell11 = Button(frame6,text="?",font=("Times",30),bg="black",fg="white",command=lambda:checker2(9,l2cell11,"l2cell11"))
+l2cell11.pack(side=LEFT,padx=10,pady=10)
+l2cell12 = Button(frame6,text="?",font=("Times",30),bg="black",fg="white",command=lambda:checker2(10,l2cell12,"l2cell12"))
+l2cell12.pack(side=LEFT,padx=10,pady=10)
+l2cell13 = Button(frame6,text="?",font=("Times",30),bg="black",fg="white",command=lambda:checker2(1,l2cell13,"l2cell13"))
+l2cell13.pack(side=LEFT,padx=10,pady=10)
+l2cell14 = Button(frame6,text="?",font=("Times",30),bg="black",fg="white",command=lambda:checker2(4,l2cell14,"l2cell14"))
+l2cell14.pack(side=LEFT,padx=10,pady=10)
+l2cell15 = Button(frame6,text="?",font=("Times",30),bg="black",fg="white",command=lambda:checker2(6,l2cell15,"l2cell15"))
+l2cell15.pack(side=LEFT,padx=10,pady=10)
+
+l2cell16 = Button(frame7,text="?",font=("Times",30),bg="black",fg="white",command=lambda:checker2(3,l2cell16,"l2cell16"))
+l2cell16.pack(side=LEFT,padx=10,pady=10)
+l2cell17 = Button(frame7,text="?",font=("Times",30),bg="black",fg="white",command=lambda:checker2(8,l2cell17,"l2cell17"))
+l2cell17.pack(side=LEFT,padx=10,pady=10)
+l2cell18 = Button(frame7,text="?",font=("Times",30),bg="black",fg="white",command=lambda:checker2(5,l2cell18,"l2cell18"))
+l2cell18.pack(side=LEFT,padx=10,pady=10)
+l2cell19 = Button(frame7,text="?",font=("Times",30),bg="black",fg="white",command=lambda:checker2(7,l2cell19,"l2cell19"))
+l2cell19.pack(side=LEFT,padx=10,pady=10)
+l2cell20 = Button(frame7,text="?",font=("Times",30),bg="black",fg="white",command=lambda:checker2(2,l2cell20,"l2cell20"))
+l2cell20.pack(side=LEFT,padx=10,pady=10)
 
 ## prize screen
 
