@@ -91,7 +91,7 @@ def playagain():
     
     score.config(text="Score : 0")
     startgame()      
-    nooftries.config(text="No. of tries : 0")
+    nooftriestext.config(text="No. of tries : 0")
     
     score.pack(side=TOP,anchor='n')
     frame1.pack(side=TOP,anchor='n')
@@ -147,7 +147,7 @@ def show_stuff(widget):
     widget.pack()
     
 def checker(value,cellname,cellstr):
-    # solvedvar.set(6)
+#     solvedvar.set(6)
     cellname.config(text=value,bg='blue')
 
     if countvar.get() == 1:
@@ -554,10 +554,10 @@ solvedvar.set(0)
 
 # home section
 
-level1text = Label(root,text="\nLEVEL 1",bg='orange',fg='Black',font=("MS Gothic",45,'bold'))
+level1text = Label(root,text="LEVEL 1",bg='orange',fg='Black',font=("MS Gothic",45,'bold'))
 level1text.pack(side=TOP,anchor='n')
 
-level2text = Label(root,text="\nLEVEL 2",bg='orange',fg='Black',font=("MS Gothic",45,'bold'))
+level2text = Label(root,text="LEVEL 2",bg='orange',fg='Black',font=("MS Gothic",45,'bold'))
 level2text.pack(side=TOP,anchor='n')
 
 topfiller = Label(root,text="\n\n\n\n\n\n\n\n\n\n\n\n",
@@ -609,7 +609,7 @@ backhome = Button(root,text="Back",
 
 # game section:
 
-score = Label(root,text=f"\n\nScore: {scorevar.get()}",
+score = Label(root,text=f"Score: {scorevar.get()}",
               font=('MS Gothic',37,'bold'),
               bg='orange',
               fg='white',)
