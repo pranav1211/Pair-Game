@@ -1,6 +1,4 @@
 from tkinter import *
-from urllib import request
-from io import BytesIO
 
 def filler():
 
@@ -250,19 +248,15 @@ topfiller = Label(root,text="\n\n\n\n\n\n\n\n\n\n\n\n",
                   bg='green')
 topfiller.pack()
 
-image_url = "https://beyondmebtw.com/projects/pairgame/level1ans.png"
-response = request.urlopen(image_url)
-data = response.read()
-imagefromurl = Image.open(BytesIO(data))
-
-newimage = PhotoImage(imagefromurl)
+image = PhotoImage(file="starttest.png")
+newimage = image.subsample(2,2)
 
 start = Button(root,text="Start Game",
                font=("Times",25),
                bg="green",
                padx=40,
                fg='white',
-               image=newimage,
+               image=image,
                command=lambda:startgame())
 start.pack(padx=24,pady=20)
 
