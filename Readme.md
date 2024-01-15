@@ -1,8 +1,8 @@
 1. Hey tech team I'm Pranav Veeraghanta.
-2. There are 2 files present : *pairgame.py* and *pairgame.exe*.
+2. The file present is *pairgame.py*.
 3. pairgame.Py contains the source code.
-4. Click on pairgame.exe to play the game.
-5. And of course you can play the game by running the pairgame.py file.
+4. You can play the game by running the pairgame.py file.
+5. The game consists of 2 levels.
 6. Here is the answer for the first level :
 
    <img src="https://beyondmebtw.com/projects/pairgame/solved1.png" alt="level 1 answer">
