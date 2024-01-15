@@ -115,7 +115,7 @@ def show_stuff(widget):
     widget.pack()
     
 def checker(value,cellname,cellstr):
-    solvedvar.set(6)
+    # solvedvar.set(6)
     cellname.config(text=value,bg='blue')
 
     if countvar.get() == 1:
