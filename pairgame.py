@@ -248,15 +248,11 @@ topfiller = Label(root,text="\n\n\n\n\n\n\n\n\n\n\n\n",
                   bg='green')
 topfiller.pack()
 
-image = PhotoImage(file="starttest.png")
-newimage = image.subsample(2,2)
-
 start = Button(root,text="Start Game",
                font=("Times",25),
-               bg="green",
-               padx=40,
+               bg="black",
+               padx=42,
                fg='white',
-               image=image,
                command=lambda:startgame())
 start.pack(padx=24,pady=20)
 
@@ -264,7 +260,7 @@ howto = Button(root,text="How to Play",
                font=("Times",25),
                bg="black",
                fg='white',
-               padx=37,
+               padx=35,
                command=lambda:howtoplayinst(start,quitgame,howto))
 howto.pack(padx=20)
 
@@ -272,14 +268,14 @@ howto.pack(padx=20)
 quitgame = Button(root,text="Exit",
                   command=lambda:quitthegame(),
                   font=("Times",25),
-                   bg="black",
-                   padx=95,
+                   bg="red",
+                   padx=90,
                    fg='white')
 quitgame.pack(padx=20,pady=20)
 
 # how to play section
 
-howtotext = Label(root,text="\t        HOW TO PLAY\n\n  1. Click on any 2 squares to reveal a number.\n\n  2. If the numbers match you get 100 points.\n\n  3. If the numbers don't match the squares\n      will be hidden and you can try again.\n\n  4. You have infinite number of tries!!!\n\n",
+howtotext = Label(root,text="\t        HOW TO PLAY\n\n  1. Click on any 2 squares to reveal a number.\n\n  2. If the numbers match you get 100 points.\n\n  3. If the numbers don't match the squares\n\n      will be hidden and you can try again.\n\n  4. You have infinite number of tries!!!\n\n",
                   font=('Times',15),
                   bg='green',
                   fg='white',
