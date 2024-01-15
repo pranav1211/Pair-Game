@@ -299,7 +299,7 @@ score = Label(root,text=f"Score: {scorevar.get()}",
               fg='white',)
 score.pack()
 
-
+# level 1
 
 frame1 = Frame(root,bg='green')
 frame1.pack(side=TOP, padx=5, pady=5,)
