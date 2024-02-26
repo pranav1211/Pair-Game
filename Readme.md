@@ -5,7 +5,7 @@
 5. The game consists of 2 levels.
 6. there is a 0.9 second delay before the      cards flip back upon wrong match,so don't go fast
 7. Check out my journey in building the game : https://beyondmebtw.wixsite.com/beyond-btw/post/i-made-a-game
-8. Want to play the game? go to hhtps://Beyondmebtw.com/pairgame
+8. Want to play the game? go to https://Beyondmebtw.com/pairgame
 9. Here is the answer for the first level :
 
    <img src="https://beyondmebtw.com/projects/pairgame/solved1.png" alt="level 1 answer">
