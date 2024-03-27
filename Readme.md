@@ -5,11 +5,11 @@ it's not a project that is going to die.
 1. Play the game : https://Beyondmebtw.com/pairgame
    
 2. Here is the answer for the first level :
-   <details>
+   <details><summary>Click to reveal the answers</summary>
    <img src="https://beyondmebtw.com/projects/pairgame/solved1.png" alt="level 1 answer">
    </details>
 3. Here is the answer for the second level :
-   <details>
+   <details><summary>Click to reveal the answers</summary>
    <img src="https://beyondmebtw.com/projects/pairgame/solved2.png" alt="level 2 answer">
    </details>
 
