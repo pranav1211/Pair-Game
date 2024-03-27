@@ -27,37 +27,28 @@ def filler():
 def quitthegame():
     root.destroy()
 
-def howtoplayinst(startt,quit,howtoo):
-    hide_stuff(startt)
-    hide_stuff(quit)
-    hide_stuff(howtoo)
-    
-        
-    show_stuff(howtotext)
-    show_stuff(backhome)
-
-
 def homepage():
     hide_stuff(howtotext)
     hide_stuff(backhome)
 
     show_stuff(start)
     start.pack(padx=20,pady=20)
-    show_stuff(howto)    
+    
     show_stuff(quitgame)
     quitgame.pack(padx=20,pady=20)
     
 def startgame():
+    root.geometry('600x900')
     show_stuff(level1text)
     level1text.pack(side=TOP,anchor='n')
     
     hide_stuff(start)
-    hide_stuff(howto)
+    
     hide_stuff(quitgame)
     
     show_stuff(howtotext)
-    howtotext.pack(side=LEFT,anchor="nw")
-    howtotext.config(font=('Times',15,'bold'),bg='orange')
+    howtotext.pack(side=BOTTOM,anchor="s")    
+    howtotext.config(font=('Times',18,'bold'),bg='orange')
     
     hide_stuff(topfiller)
     topfiller.config(bg='orange')
@@ -88,6 +79,12 @@ def playagain():
     storevar2.set(0)
     scorevar.set(0)
     nooftries.set(0)
+    
+    prize_button.config(text="PRIZE",font=("Times",25),
+               bg="violet",
+               fg='black',
+               padx=5,
+               command=lambda:prize())
     
     
     score.config(text="Score : 0")
@@ -289,14 +286,14 @@ def checker(value,cellname,cellstr):
                     cell12.config(text="?",bg="black")
                     cell12.config(command=lambda:checker(5,cell12,"cell12"))
                       
-            root.after(900,delaycellname)
+            root.after(300,delaycellname)
                         
     if(solvedvar.get()==6):
         def delay():
             # hide_stuff(score)
     
             hide_stuff(frame1)
-            hide_stuff(frame2)
+            hide_stuff(frame2) 
             hide_stuff(frame3)
             
             hide_stuff(level1text)
@@ -330,8 +327,8 @@ def displaylevel2():
     show_stuff(level2text)
     
     show_stuff(howtotext)
-    howtotext.pack(side=LEFT,anchor="nw")
-    howtotext.config(font=('Times',15,'bold'),bg='orange')
+    howtotext.pack(side=BOTTOM,anchor="s")
+    howtotext.config(font=('Times',16,'bold'),bg='orange')
     
     show_stuff(score)
     
@@ -479,7 +476,7 @@ def checker2(value,cellname,cellstr):
                 elif storecell2.get() == "l2cell20":
                     l2cell20.config(text="?",bg="black",command=lambda:checker2(2,l2cell20,"l2cell20"))
 
-            root.after(900,delaycellname2)
+            root.after(300,delaycellname2)
 
 
         
@@ -505,11 +502,14 @@ def checker2(value,cellname,cellstr):
             hide_stuff(howtotext)
             hide_stuff(nooftriestext)
             hide_stuff(level2text)
+            prize_button.after(1000,prize_button.invoke)
                                 
         root.after(1000,delay)   
         
-def prize():
+def prize():    
     prize_button.config(text="NOTHING",bg="blue",fg='white')
+    
+    
     
 
 ##########################################################################
@@ -517,7 +517,7 @@ def prize():
 
 
 root  = Tk(className="Pair Game")
-root.geometry('900x900')
+root.geometry('500x500')
 root.configure(bg='violet')
 root.title("Match The Pair By Pranav Veeraghanta")
 
@@ -571,16 +571,7 @@ start = Button(root,text="Start Game",
                padx=42,
                fg='white',
                command=lambda:startgame())
-start.pack(padx=24,pady=20)
-
-howto = Button(root,text="How to Play",
-               font=("Times",25),
-               bg="black",
-               fg='white',
-               padx=35,
-               command=lambda:howtoplayinst(start,quitgame,howto))
-howto.pack(padx=20)
-
+start.pack(padx=24)
 
 quitgame = Button(root,text="Exit",
                   command=lambda:quitthegame(),
@@ -592,11 +583,12 @@ quitgame.pack(padx=20,pady=20)
 
 # how to play section
 
-howtotext = Label(root,text="\t        HOW TO PLAY\n\n  1. Click on any 2 squares to reveal a number.\n\n  2. If the numbers match you get 100 points.\n\n  3. If the numbers don't match the squares\n\n      will be hidden and you can try again.\n\n  4. You have infinite number of tries!!!\n\n",
+howtotext = Label(root,text="\t     HOW TO PLAY\n\nClick on any 2 squares to reveal a number,\n\nIf the numbers match you get 100 points,\n\nIf the numbers don't match the squares\n\nwill be hidden and you can try again,\n\nYou have infinite number of tries!!!\n\n",
                   font=('Times',20,'bold'),
                   bg='violet',
                   fg='black',
-                  justify=LEFT)
+                  justify=LEFT,
+                  )
 howtotext.pack(side=TOP)
 
 
@@ -748,48 +740,48 @@ frame6.pack(side=TOP, padx=5, pady=5)
 frame7 = Frame(root,bg='orange')
 frame7.pack(side=TOP, padx=5, pady=5)
 
-l2cell1 = Button(frame4,text="?",font=("Times",40),bg="black",padx=5,fg="white",command=lambda:checker2(1,l2cell1,"l2cell1"))
+l2cell1 = Button(frame4,text="?",font=("Times",32),bg="black",padx=5,fg="white",command=lambda:checker2(1,l2cell1,"l2cell1"))
 l2cell1.pack(side=LEFT,padx=10,pady=10)
-l2cell2 = Button(frame4,text="?",font=("Times",40),bg="black",padx=5,fg="white",command=lambda:checker2(9,l2cell2,"l2cell2"))
+l2cell2 = Button(frame4,text="?",font=("Times",32),bg="black",padx=5,fg="white",command=lambda:checker2(9,l2cell2,"l2cell2"))
 l2cell2.pack(side=LEFT,padx=10,pady=10)
-l2cell3 = Button(frame4,text="?",font=("Times",40),bg="black",padx=5,fg="white",command=lambda:checker2(7,l2cell3,"l2cell3"))
+l2cell3 = Button(frame4,text="?",font=("Times",32),bg="black",padx=5,fg="white",command=lambda:checker2(7,l2cell3,"l2cell3"))
 l2cell3.pack(side=LEFT,padx=10,pady=10)
-l2cell4 = Button(frame4,text="?",font=("Times",40),bg="black",padx=5,fg="white",command=lambda:checker2(6,l2cell4,"l2cell4"))
+l2cell4 = Button(frame4,text="?",font=("Times",32),bg="black",padx=5,fg="white",command=lambda:checker2(6,l2cell4,"l2cell4"))
 l2cell4.pack(side=LEFT,padx=10,pady=10)
-l2cell5 = Button(frame4,text="?",font=("Times",40),bg="black",padx=5,fg="white",command=lambda:checker2(3,l2cell5,"l2cell5"))
+l2cell5 = Button(frame4,text="?",font=("Times",32),bg="black",padx=5,fg="white",command=lambda:checker2(3,l2cell5,"l2cell5"))
 l2cell5.pack(side=LEFT,padx=10,pady=10)
 
-l2cell6 = Button(frame5,text="?",font=("Times",40),bg="black",padx=5,fg="white",command=lambda:checker2(10,l2cell6,"l2cell6"))
+l2cell6 = Button(frame5,text="?",font=("Times",32),bg="black",padx=5,fg="white",command=lambda:checker2(10,l2cell6,"l2cell6"))
 l2cell6.pack(side=LEFT,padx=10,pady=10)
-l2cell7 = Button(frame5,text="?",font=("Times",40),bg="black",padx=5,fg="white",command=lambda:checker2(4,l2cell7,"l2cell7"))
+l2cell7 = Button(frame5,text="?",font=("Times",32),bg="black",padx=5,fg="white",command=lambda:checker2(4,l2cell7,"l2cell7"))
 l2cell7.pack(side=LEFT,padx=10,pady=10)
-l2cell8 = Button(frame5,text="?",font=("Times",40),bg="black",padx=5,fg="white",command=lambda:checker2(8,l2cell8,"l2cell8"))
+l2cell8 = Button(frame5,text="?",font=("Times",32),bg="black",padx=5,fg="white",command=lambda:checker2(8,l2cell8,"l2cell8"))
 l2cell8.pack(side=LEFT,padx=10,pady=10)
-l2cell9 = Button(frame5,text="?",font=("Times",40),bg="black",padx=5,fg="white",command=lambda:checker2(2,l2cell9,"l2cell9"))
+l2cell9 = Button(frame5,text="?",font=("Times",32),bg="black",padx=5,fg="white",command=lambda:checker2(2,l2cell9,"l2cell9"))
 l2cell9.pack(side=LEFT,padx=10,pady=10)
-l2cell10 = Button(frame5,text="?",font=("Times",40),bg="black",padx=5,fg="white",command=lambda:checker2(5,l2cell10,"l2cell10"))
+l2cell10 = Button(frame5,text="?",font=("Times",32),bg="black",padx=5,fg="white",command=lambda:checker2(5,l2cell10,"l2cell10"))
 l2cell10.pack(side=LEFT,padx=10,pady=10)
 
-l2cell11 = Button(frame6,text="?",font=("Times",40),bg="black",padx=5,fg="white",command=lambda:checker2(9,l2cell11,"l2cell11"))
+l2cell11 = Button(frame6,text="?",font=("Times",32),bg="black",padx=5,fg="white",command=lambda:checker2(9,l2cell11,"l2cell11"))
 l2cell11.pack(side=LEFT,padx=10,pady=10)
-l2cell12 = Button(frame6,text="?",font=("Times",40),bg="black",padx=5,fg="white",command=lambda:checker2(10,l2cell12,"l2cell12"))
+l2cell12 = Button(frame6,text="?",font=("Times",32),bg="black",padx=5,fg="white",command=lambda:checker2(10,l2cell12,"l2cell12"))
 l2cell12.pack(side=LEFT,padx=10,pady=10)
-l2cell13 = Button(frame6,text="?",font=("Times",40),bg="black",padx=5,fg="white",command=lambda:checker2(1,l2cell13,"l2cell13"))
+l2cell13 = Button(frame6,text="?",font=("Times",32),bg="black",padx=5,fg="white",command=lambda:checker2(1,l2cell13,"l2cell13"))
 l2cell13.pack(side=LEFT,padx=10,pady=10)
-l2cell14 = Button(frame6,text="?",font=("Times",40),bg="black",padx=5,fg="white",command=lambda:checker2(4,l2cell14,"l2cell14"))
+l2cell14 = Button(frame6,text="?",font=("Times",32),bg="black",padx=5,fg="white",command=lambda:checker2(4,l2cell14,"l2cell14"))
 l2cell14.pack(side=LEFT,padx=10,pady=10)
-l2cell15 = Button(frame6,text="?",font=("Times",40),bg="black",padx=5,fg="white",command=lambda:checker2(6,l2cell15,"l2cell15"))
+l2cell15 = Button(frame6,text="?",font=("Times",32),bg="black",padx=5,fg="white",command=lambda:checker2(6,l2cell15,"l2cell15"))
 l2cell15.pack(side=LEFT,padx=10,pady=10)
 
-l2cell16 = Button(frame7,text="?",font=("Times",40),bg="black",padx=5,fg="white",command=lambda:checker2(3,l2cell16,"l2cell16"))
+l2cell16 = Button(frame7,text="?",font=("Times",32),bg="black",padx=5,fg="white",command=lambda:checker2(3,l2cell16,"l2cell16"))
 l2cell16.pack(side=LEFT,padx=10,pady=10)
-l2cell17 = Button(frame7,text="?",font=("Times",40),bg="black",padx=5,fg="white",command=lambda:checker2(8,l2cell17,"l2cell17"))
+l2cell17 = Button(frame7,text="?",font=("Times",32),bg="black",padx=5,fg="white",command=lambda:checker2(8,l2cell17,"l2cell17"))
 l2cell17.pack(side=LEFT,padx=10,pady=10)
-l2cell18 = Button(frame7,text="?",font=("Times",40),bg="black",padx=5,fg="white",command=lambda:checker2(5,l2cell18,"l2cell18"))
+l2cell18 = Button(frame7,text="?",font=("Times",32),bg="black",padx=5,fg="white",command=lambda:checker2(5,l2cell18,"l2cell18"))
 l2cell18.pack(side=LEFT,padx=10,pady=10)
-l2cell19 = Button(frame7,text="?",font=("Times",40),bg="black",padx=5,fg="white",command=lambda:checker2(7,l2cell19,"l2cell19"))
+l2cell19 = Button(frame7,text="?",font=("Times",32),bg="black",padx=5,fg="white",command=lambda:checker2(7,l2cell19,"l2cell19"))
 l2cell19.pack(side=LEFT,padx=10,pady=10)
-l2cell20 = Button(frame7,text="?",font=("Times",40),bg="black",padx=5,fg="white",command=lambda:checker2(2,l2cell20,"l2cell20"))
+l2cell20 = Button(frame7,text="?",font=("Times",32),bg="black",padx=5,fg="white",command=lambda:checker2(2,l2cell20,"l2cell20"))
 l2cell20.pack(side=LEFT,padx=10,pady=10)
 
 ##
@@ -804,9 +796,10 @@ nooftriestext.pack()
 prize_text = Label(root,text="\n\n\n\n\n\n  Congratulations!!!\n\n      You've Won:\n",font=('Times',25,'bold'),bg='orange',fg='white',padx=95,justify=LEFT)
 prize_text.pack()
 
-prize_button = Button(root,text="CLICK ME",font=("Times",25),
+prize_button = Button(root,text="PRIZE",font=("Times",25),
                bg="violet",
                fg='black',
+               padx=5,
                command=lambda:prize())
 prize_button.pack()
 
