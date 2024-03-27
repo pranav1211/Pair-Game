@@ -13,7 +13,7 @@ it's not a project that is going to die.
    <img src="https://beyondmebtw.com/projects/pairgame/solved2.png" alt="level 2 answer">
 
 ## Changelog
-   # V 1.0
+   V 1.0
       -> pairgame version 2
          -> removed how to play section from start screen.
          -> changed screen sizes of the game.
